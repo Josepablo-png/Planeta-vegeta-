@@ -134,4 +134,4 @@ Se completó con éxito el armado del circuito oscilador astable con el temporiz
 
 ![Thinkerkad](../recursos/imgs/Thinkerkad1.jpg){loading=lazy}
 
-
+**Se uso IA para darle formato a la pagina y un tono mas formal a las respuestas**
