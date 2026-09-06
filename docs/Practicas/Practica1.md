@@ -125,3 +125,13 @@ Se completó con éxito el armado del circuito oscilador astable con el temporiz
 - [x] **Tablas de medición:** Completas con el porcentaje de error y la explicación analítica correspondiente.
 - [x] **Mini-video ($\le 60\ \text{s}$):** Grabación mostrando la señal en el osciloscopio y el funcionamiento del LED, respaldada mediante enlace multimedia en el documento.
 - [x] **Bitácora de errores:** Documentada formalmente en la Sección 6 del presente reporte.
+
+![Osciloscopio](../recursos/imgs/Osciloscopio%201.jpg){loading=lazy}
+
+![Circuito 1](../recursos/imgs/Circuito%201.jpg){loading=lazy}
+
+![Circuito 2](../recursos/imgs/Circuito%202.jpg){loading=lazy}
+
+![Thinkerkad](../recursos/imgs/Thinkerkad1.jpg){loading=lazy}
+
+
