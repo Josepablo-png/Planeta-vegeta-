@@ -1,0 +1,1184 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../../SobreMi/">
+      
+      
+        <link rel="next" href="../Practica2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 1 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reporte-de-practica-circuito-temporizador-555-en-modo-astable" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-metas-y-propositos-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Metas y Propósitos de la Práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Metas y Propósitos de la Práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo General
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-especificos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos Específicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-componentes-y-materiales-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Componentes y Materiales Utilizados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-diseno-formulas-del-astable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Diseño: Fórmulas del Astable
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Diseño: Fórmulas del Astable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sustitucion-y-calculos-teoricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sustitución y Cálculos Teóricos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-registro-de-mediciones-y-comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Registro de Mediciones y Comparativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-analisis-de-variaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Análisis de Variaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-bitacora-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Bitácora de Errores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-evidencias-de-entrega-portafolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Evidencias de Entrega (Portafolio)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-metas-y-propositos-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Metas y Propósitos de la Práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Metas y Propósitos de la Práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivo-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivo General
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-especificos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos Específicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-componentes-y-materiales-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Componentes y Materiales Utilizados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-diseno-formulas-del-astable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Diseño: Fórmulas del Astable
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Diseño: Fórmulas del Astable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sustitucion-y-calculos-teoricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sustitución y Cálculos Teóricos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-registro-de-mediciones-y-comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Registro de Mediciones y Comparativa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-analisis-de-variaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Análisis de Variaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-bitacora-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Bitácora de Errores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-evidencias-de-entrega-portafolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Evidencias de Entrega (Portafolio)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reporte-de-practica-circuito-temporizador-555-en-modo-astable">Reporte de Práctica: Circuito Temporizador 555 en Modo Astable</h1>
+<p><strong>Universidad Iberoamericana Puebla</strong><br />
+<strong>Materia:</strong> Introducción a la Mecatrónica<br />
+<strong>Tema:</strong> Electrónica básica y medición — Temporizador 555: astable  </p>
+<hr />
+<h2 id="1-metas-y-propositos-de-la-practica">1. Metas y Propósitos de la Práctica</h2>
+<h3 id="objetivo-general">Objetivo General</h3>
+<p>Construir un oscilador que haga parpadear un LED, calcular su frecuencia y <em>duty cycle</em> teóricos, medirlos y comparar los resultados obtenidos.</p>
+<h3 id="objetivos-especificos">Objetivos Específicos</h3>
+<ul>
+<li>Calcular por medio de fórmulas el tiempo que el circuito permanece encendido y apagado, junto con su frecuencia y ciclo de trabajo.</li>
+<li>Realizar el montaje físico del circuito en la protoboard empleando el circuito integrado 555, los capacitores, las resistencias y el LED.</li>
+<li>Medir de forma práctica los valores reales de voltaje, corriente, frecuencia y ciclo de trabajo utilizando el multímetro y el osciloscopio.</li>
+<li>Contrastar los resultados teóricos frente a los experimentales para obtener el porcentaje de error y analizar sus causas.</li>
+</ul>
+<hr />
+<h2 id="2-componentes-y-materiales-utilizados">2. Componentes y Materiales Utilizados</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Cantidad</th>
+<th style="text-align: left;">Componente / Material</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1x</strong></td>
+<td style="text-align: left;">Circuito Integrado NE555 (DIP-8)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>1x</strong></td>
+<td style="text-align: left;">LED (Diodo Emisor de Luz)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>1x</strong></td>
+<td style="text-align: left;">Resistor para LED (<span class="arithmatex">\(330\ \Omega\)</span> o <span class="arithmatex">\(470\ \Omega\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2x</strong></td>
+<td style="text-align: left;">Resistores temporizadores: <span class="arithmatex">\(R_A = 1\ \text{k}\Omega\)</span>, <span class="arithmatex">\(R_B = 10\ \text{k}\Omega\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>1x</strong></td>
+<td style="text-align: left;">Capacitor de temporización: <span class="arithmatex">\(C = 100\ \mu\text{F}\)</span> (electrolítico) / <span class="arithmatex">\(100\ \text{nF}\)</span> (cerámico)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>1x</strong></td>
+<td style="text-align: left;">Capacitor <span class="arithmatex">\(10\ \text{nF}\)</span> para pin 5 (CTRL) <span class="arithmatex">\(\rightarrow\)</span> estabilidad</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>—</strong></td>
+<td style="text-align: left;">Protoboard, cables de conexión, fuente <span class="arithmatex">\(5\ \text{V}\)</span> regulada</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-diseno-formulas-del-astable">3. Diseño: Fórmulas del Astable</h2>
+<p>En modo astable, el capacitor <span class="arithmatex">\(C\)</span> se carga a través de <span class="arithmatex">\(R_A + R_B\)</span> y se descarga a través de <span class="arithmatex">\(R_B\)</span>:</p>
+<ul>
+<li>
+<p><strong>Tiempo en Nivel Alto (<span class="arithmatex">\(t_{\text{ALTO}}\)</span>):</strong>
+  $<span class="arithmatex">\(t_{\text{ALTO}} = 0.693 \cdot (R_A + R_B) \cdot C\)</span>$</p>
+</li>
+<li>
+<p><strong>Tiempo en Nivel Bajo (<span class="arithmatex">\(t_{\text{BAJO}}\)</span>):</strong>
+  $<span class="arithmatex">\(t_{\text{BAJO}} = 0.693 \cdot R_B \cdot C\)</span>$</p>
+</li>
+<li>
+<p><strong>Periodo Total (<span class="arithmatex">\(T\)</span>):</strong>
+  $<span class="arithmatex">\(T = t_{\text{ALTO}} + t_{\text{BAJO}} = 0.693 \cdot (R_A + 2R_B) \cdot C\)</span>$</p>
+</li>
+<li>
+<p><strong>Frecuencia de Oscilación (<span class="arithmatex">\(f\)</span>):</strong>
+  $<span class="arithmatex">\(f = \frac{1}{T} = \frac{1.44}{(R_A + 2R_B) \cdot C}\)</span>$</p>
+</li>
+<li>
+<p><strong>Ciclo de Trabajo (<em>Duty Cycle</em>):</strong>
+  $<span class="arithmatex">\(\text{Duty} = \frac{t_{\text{ALTO}}}{T} = \frac{R_A + R_B}{R_A + 2R_B} \times 100\%\)</span>$</p>
+</li>
+</ul>
+<hr />
+<h3 id="sustitucion-y-calculos-teoricos">Sustitución y Cálculos Teóricos</h3>
+<p><strong>Datos:</strong> <span class="arithmatex">\(R_A = 1\ \text{k}\Omega\)</span>, <span class="arithmatex">\(R_B = 10\ \text{k}\Omega\)</span>, <span class="arithmatex">\(C = 100\ \mu\text{F}\)</span></p>
+<div class="arithmatex">\[t_{\text{ALTO}} = 0.693 \cdot (1000 + 10000) \cdot (100 \times 10^{-6}) = 0.7623\ \text{s}\]</div>
+<div class="arithmatex">\[t_{\text{BAJO}} = 0.693 \cdot (10000) \cdot (100 \times 10^{-6}) = 0.693\ \text{s}\]</div>
+<div class="arithmatex">\[T = 0.7623 + 0.693 = 1.4553\ \text{s}\]</div>
+<div class="arithmatex">\[f = \frac{1}{1.4553} \approx 0.687\ \text{Hz} \quad (\approx 0.69\ \text{Hz})\]</div>
+<div class="arithmatex">\[\text{Duty} = \frac{1000 + 10000}{1000 + 20000} \times 100\% = \frac{11000}{21000} \times 100\% \approx 52.38\% \quad (\approx 52.49\%)\]</div>
+<ul>
+<li>
+<p><strong>Voltaje de salida en ALTO:</strong><br />
+  $<span class="arithmatex">\(V_{OH} \approx V_{CC} - 1.5\ \text{V} = 5.0 - 1.5 = 3.5\ \text{V}\)</span>$</p>
+</li>
+<li>
+<p><strong>Corriente estimada del LED:</strong><br />
+  $<span class="arithmatex">\(I_{\text{LED}} = \frac{V_{OH} - V_f}{R_{\text{LED}}} = \frac{3.5 - 1.8}{330} \approx 5.15\ \text{mA}\)</span>$</p>
+</li>
+</ul>
+<hr />
+<h2 id="4-registro-de-mediciones-y-comparativa">4. Registro de Mediciones y Comparativa</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Magnitud</th>
+<th style="text-align: center;">Teórico (calculado)</th>
+<th style="text-align: center;">Medido</th>
+<th style="text-align: center;">% de error</th>
+<th style="text-align: left;">¿Con qué lo mediste?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(V_{CC}\)</span> (V)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(5.0\ \text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5.060\ \text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.20\%\)</span></td>
+<td style="text-align: left;">Multímetro (V, en paralelo)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>V de salida en ALTO (V)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\approx 3.5\ \text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.448\ \text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(87.20\%\)</span></td>
+<td style="text-align: left;">Multímetro / osciloscopio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia (Hz)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.69\ \text{Hz}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.6866\ \text{Hz}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.49\%\)</span></td>
+<td style="text-align: left;">Osciloscopio / DMM con Hz</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Duty (%)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(52.49\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.08\%\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(73.82\%\)</span></td>
+<td style="text-align: left;">Osciloscopio (Measure)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>I del LED (mA)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\approx 5.15\ \text{mA}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1.574\ \text{mA}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(69.44\%\)</span></td>
+<td style="text-align: left;">Multímetro (A, en serie)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Fórmula de error utilizada:</strong><br />
+$<span class="arithmatex">\(\%\ \text{Error} = \left| \frac{\text{Teórico} - \text{Medido}}{\text{Teórico}} \right| \times 100\)</span>$</p>
+</blockquote>
+<hr />
+<h2 id="5-analisis-de-variaciones">5. Análisis de Variaciones</h2>
+<ul>
+<li>
+<p><strong>Ciclo de Trabajo (<em>Duty Cycle</em>):</strong><br />
+  La diferencia entre el valor calculado y el medido se debe a que los capacitores electrolíticos tienen una tolerancia de fabricación amplia. Esto significa que su capacidad real de almacenamiento varía respecto al valor nominal impreso, modificando los tiempos de carga y descarga del oscilador.</p>
+</li>
+<li>
+<p><strong>Voltaje de Salida en Nivel Alto:</strong><br />
+  La caída en el voltaje medido en el Pin 3 ocurre debido a la resistencia interna propia de la etapa de salida del circuito integrado 555 cuando se le conecta una carga externa, lo que reduce la tensión máxima entregada.</p>
+</li>
+<li>
+<p><strong>Intensidad de Corriente del LED:</strong><br />
+  La reducción en la corriente medida que pasa por el diodo LED es una consecuencia directa de la menor tensión entregada en la salida del circuito integrado, ya que al haber menos voltaje disponible, fluye una menor cantidad de corriente a través de la resistencia limitadora.</p>
+</li>
+</ul>
+<hr />
+<h2 id="6-bitacora-de-errores">6. Bitácora de Errores</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">a. Qué falló</th>
+<th style="text-align: left;">b. Cómo lo encontraste</th>
+<th style="text-align: left;">c. Cómo lo resolviste</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Ninguna falla;</strong> el circuito operó de manera adecuada desde la primera conexión a la fuente de alimentación.</td>
+<td style="text-align: left;">Mediante la inspección visual del montaje físico y la verificación de las ondas mostradas en los instrumentos.</td>
+<td style="text-align: left;">No fue necesario realizar ajustes, ya que el diseño y el armado sobre la protoboard fueron correctos desde el inicio.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-conclusiones">7. Conclusiones</h2>
+<p>Se completó con éxito el armado del circuito oscilador astable con el temporizador 555 para el parpadeo del LED, logrando determinar y comprobar experimentalmente su frecuencia y ciclo de trabajo. A través del análisis se evidenció que las variaciones numéricas en parámetros específicos como el <em>duty</em>, el voltaje alto y la corriente se deben principalmente a las tolerancias físicas de los componentes pasivos y a la caída de tensión interna que experimenta el dispositivo al alimentar elementos externos.</p>
+<hr />
+<h2 id="8-evidencias-de-entrega-portafolio">8. Evidencias de Entrega (Portafolio)</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Esquemáticos anotados:</strong> Diagrama del circuito con valores de <span class="arithmatex">\(R_A\)</span>, <span class="arithmatex">\(R_B\)</span> y <span class="arithmatex">\(C\)</span> explícitos.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Fotos del montaje:</strong> Evidencia fotográfica de la implementación física sobre la protoboard.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Tablas de medición:</strong> Completas con el porcentaje de error y la explicación analítica correspondiente.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Mini-video (<span class="arithmatex">\(\le 60\ \text{s}\)</span>):</strong> Grabación mostrando la señal en el osciloscopio y el funcionamiento del LED, respaldada mediante enlace multimedia en el documento.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Bitácora de errores:</strong> Documentada formalmente en la Sección 6 del presente reporte.</li>
+</ul>
+<p><img alt="Osciloscopio" loading="lazy" src="../../recursos/imgs/Osciloscopio%201.jpg" /></p>
+<p><img alt="Circuito 1" loading="lazy" src="../../recursos/imgs/Circuito%201.jpg" /></p>
+<p><img alt="Circuito 2" loading="lazy" src="../../recursos/imgs/Circuito%202.jpg" /></p>
+<p><img alt="Thinkerkad" loading="lazy" src="../../recursos/imgs/Thinkerkad1.jpg" /></p>
+<p><strong>Se uso IA para darle formato a la pagina y un tono mas formal a las respuestas</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
