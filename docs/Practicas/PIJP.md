@@ -6,10 +6,11 @@
 La clase tuvo lugar dentro del IDIT, en la sección para corte y soldadura. Para ella el profesor nos pidió llevar bata y botas industriales, ya que las actividades que íbamos a hacer tenían el riesgo de poder ocasionarnos algún accidente.
 
 Empezando la clase el profesor nos presentó al señor Cholula, quien nos explicó algunas reglas de seguridad que debíamos seguir en todo momento, después de esto el profesor y el señor Cholula nos pidieron ir al almacén a pedir piezas de equipo que necesitábamos, por nuestra seguridad, estos fueron:
-* Careta para soldar
-* Pechera de cuero
-* Guantes
-* Lentes de seguridad
+
+- Careta para soldar
+- Pechera de cuero
+- Guantes
+- Lentes de seguridad
 
 ![Equipo de trabajo](../recursos/imgs/Equipo1.jpg){loading=lazy}
 
