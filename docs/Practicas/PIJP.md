@@ -47,6 +47,12 @@ Al final de la clase, entre todos soldamos 2 pedazos de metal a un ángulo de 90
 
 Empezando la clase el profesor nos enseñó un sitio web donde podíamos ver unos ensamblajes que sus alumnos habían hecho, además de algunas técnicas para poder hacer el material “flexible” con corte laser. Después nos puso la consigna de cómo podríamos hacer un ensamblaje de un cubo, después de pensarlo un poco surgió la idea de hacerlo conectando las caras con dientes salientes de cada cara, hicimos un boceto en Paint para poder visualizar mejor que querríamos hacer, después de llegar a la idea final pasamos a modelarlo a SolidWorks, en la sección de pieza realizamos las caras por separado y, al terminarlas, el profesor nos enseñó la herramienta de ensamblaje, en donde pudimos meter en un mismo plano todas las caras que hicimos y como agrupar las caras para evitar que estas se muevan por el plano y ver si de verdad se ensamblarían de buena manera, lo cual logramos, sin embargo falto el añadir la tolerancia por Kerf, que es el material que se “come” la cortadora laser al momento de ocuparla, y al corregirlo quedamos con el ensamble del cubo.
 
+![Cubo 1](../recursos/imgs/Cubo1.jpg){loading=lazy}
+![Cubo 2](../recursos/imgs/Cubo2.jpg){loading=lazy}
+![Cubo 3](../recursos/imgs/Cubo3.jpg){loading=lazy}
+![Cubo 4](../recursos/imgs/Cubo4.jpg){loading=lazy}
+![Cubo 5](../recursos/imgs/Cubo5.jpg){loading=lazy}
+
 ---
 
 ## Reporte 3: Cortadora Laser
