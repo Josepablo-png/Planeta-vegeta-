@@ -163,41 +163,48 @@ De acuerdo con lo solicitado en la práctica, se presentan como evidencias los *
 
 ### Evidencia 1. Código de motores DC
 
-> **Insertar aquí la captura de pantalla del código utilizado para controlar la dirección y las tres velocidades de los motores DC.**
+![Codigo 3.1](../recursos/imgs/Codigo3.1.jpg){loading=lazy}
+![Codigo 3.2](../recursos/imgs/Codigo3.2.jpg){loading=lazy}
+![Codigo 3.3](../recursos/imgs/Codigo3.3.jpg){loading=lazy}
+![Codigo 3.4](../recursos/imgs/Codigo3.4.jpg){loading=lazy}
+![Codigo 3.5](../recursos/imgs/Codigo3.5.jpg){loading=lazy}
+![Codigo 3.6](../recursos/imgs/Codigo3.6.jpg){loading=lazy}
+![Codigo 3.7](../recursos/imgs/Codigo3.7.jpg){loading=lazy}
+![Codigo 3.8](../recursos/imgs/Codigo3.8.jpg){loading=lazy}
 
-![Código de motores DC](ruta/a/captura_codigo_motor.png)
 
 ---
 
 ### Evidencia 2. Código de servomotores
 
-> **Insertar aquí la captura de pantalla del código utilizado para controlar los servomotores en las posiciones de 0°, 90° y 180°.**
+![Codigo 3.1.1](../recursos/imgs/Codigo3.1.1.jpg){loading=lazy}
 
-![Código de servomotores](ruta/a/captura_codigo_servo.png)
+
 
 ---
 
 ### Evidencia 3. Esquemático del circuito
 
-> **Insertar aquí la captura o imagen del circuito y de las conexiones realizadas durante la práctica.**
 
-![Esquemático del circuito](ruta/a/esquematico.png)
+![Esquematico DC](../recursos/imgs/EsquematicoDC.jpg){loading=lazy}
+![Esquematico Servo](../recursos/imgs/EsquematicoServo.jpg){loading=lazy}
+
 
 ---
 
 ### Evidencia 4. Funcionamiento de los motores DC
 
-> **Insertar aquí el video donde se observe el cambio de dirección de los motores y el funcionamiento de las tres velocidades mediante PWM.**
 
-[Ver video de funcionamiento de los motores DC](ruta/a/video_motores)
+
+
 
 ---
 
 ### Evidencia 5. Funcionamiento de los servomotores
 
-> **Insertar aquí el video donde se observe el movimiento de los servomotores entre las posiciones de 0°, 90° y 180°.**
 
-[Ver video de funcionamiento de los servomotores](ruta/a/video_servos)
+
+
 
 ---
 
@@ -217,3 +224,5 @@ De acuerdo con lo solicitado en la práctica, se presentan como evidencias los *
 | Duty a 0° | 5 % |
 | Duty a 90° | 7.5 % |
 | Duty a 180° | 10 % |
+
+*Se uso IA para darle formato y un tono mas formal a la practica*
