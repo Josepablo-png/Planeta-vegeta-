@@ -8,7 +8,7 @@
 
 En esta práctica trabajamos con un ESP32 para leer información de diferentes sensores. Utilizamos un potenciómetro y un sensor ultrasónico, con los cuales pudimos obtener valores digitales y relacionarlos con variables físicas como el ángulo y la distancia.
 
-La práctica nos ayudó a entender cómo el ESP32 recibe las señales de los sensores y cómo podemos convertir esas lecturas en valores que sean más fáciles de interpretar.
+
 ---
 
 ## 2. Objetivos
@@ -105,8 +105,9 @@ Se divide entre dos porque la señal realiza un recorrido de ida y vuelta.
 Los resultados muestran que las mediciones del sensor fueron bastante cercanas a las distancias de referencia. Sin embargo, hubo pequeñas diferencias debido a factores como la posición del objeto, el rebote de las ondas ultrasónicas y posibles variaciones en la lectura del sensor.
 
 El error se calculó mediante:
-
 `Error = |Distancia de referencia - Distancia medida|`
+
+
 ---
 
 ## 5. Código utilizado
