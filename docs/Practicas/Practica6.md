@@ -29,7 +29,6 @@ También estimamos sus relaciones de transmisión y comprobamos si podían girar
 | -------- | --------------------- |
 | 8        | Mecanismos impresos en 3D |
 | 1        | Tabla de registro para anotar las observaciones |
-| 1        | Celular para tomar fotografías y grabar videos |
 
 **Importante:** No fue necesario utilizar electricidad ni componentes electrónicos, ya que todos los mecanismos se accionaron manualmente.
 
@@ -265,3 +264,5 @@ calcular la velocidad del centro del carro, su velocidad de giro, y el radio de 
 Con esta práctica aprendimos cómo funcionan diferentes mecanismos y cómo cada uno puede cambiar el movimiento de una manera distinta. Al girarlos y contar sus dientes o vueltas, pudimos entender mejor sus relaciones de transmisión y comprobar si podían moverse en ambos sentidos.
 
 Además, vimos que mecanismos que parecen sencillos tienen aplicaciones importantes en objetos cotidianos, como los carros, las cámaras y los taladros. Esto nos ayudó a identificar cuáles podrían ser útiles para nuestros propios proyectos de mecatrónica.
+
+*Se uso IA para darle formato y un tono mas formal a la practica*
