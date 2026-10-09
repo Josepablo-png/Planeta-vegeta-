@@ -1,0 +1,82 @@
+# Práctica: LED con Bluetooth
+
+**Universidad Iberoamericana Puebla**  
+**Materia:** Introducción a la Mecatrónica  
+**Periodo:** Otoño 2026
+
+## 1. Objetivo
+
+Utilizar la comunicación Bluetooth del ESP32 para recibir comandos desde un teléfono Android y controlar el encendido y apagado de un LED. También se busca observar cómo un retraso puede afectar el tiempo de respuesta del sistema.
+
+## 2. Materiales
+
+- ESP32
+- LED
+- Resistencia
+- Protoboard
+- Cables jumper
+- Cable USB
+- Teléfono Android con aplicación de terminal Bluetooth
+- Computadora con Arduino IDE
+
+## 3. Desarrollo
+
+Se utilizó un ESP32 con un LED conectado al GPIO 23. Mediante Arduino IDE se cargó un programa que utiliza la librería BluetoothSerial.h para establecer la comunicación Bluetooth.
+
+Es necesario utilizar un teléfono Android para conectarse al ESP32 mediante una aplicación de terminal Bluetooth. El dispositivo aparece con el nombre ESP32_LED.
+
+Al enviar el comando ON, el LED se enciende. Al enviar OFF, se apaga. El ESP32 también responde con un mensaje de confirmación. Si recibe un comando diferente, indica que es incorrecto.
+
+La función trim() elimina espacios y caracteres adicionales del mensaje recibido. Además, el programa incluye una variable para activar un retraso de un segundo y observar su efecto en el tiempo de respuesta.
+
+## 4. Código utilizado
+
+#include "BluetoothSerial.h"
+
+BluetoothSerial bluetooth;
+
+#define pinLed 23
+
+bool pruebaRetraso = false;
+
+void setup() {
+  Serial.begin(115200);
+  bluetooth.begin("ESP32_LED");
+  bluetooth.setTimeout(20);
+
+  pinMode(pinLed, OUTPUT);
+  digitalWrite(pinLed, LOW);
+}
+
+void loop() {
+  if (bluetooth.available()) {
+    String comando = bluetooth.readStringUntil('\n');
+    comando.trim();
+
+    if (comando == "ON") {
+      digitalWrite(pinLed, HIGH);
+      bluetooth.println("LED encendido");
+    }
+    else if (comando == "OFF") {
+      digitalWrite(pinLed, LOW);
+      bluetooth.println("LED apagado");
+    }
+    else {
+      bluetooth.println("Comando incorrecto");
+    }
+  }
+
+  if (pruebaRetraso) {
+    delay(1000);
+  }
+}
+
+## 5. Resultados y observaciones
+
+El programa permite controlar el LED desde un teléfono Android mediante Bluetooth. El comando ON enciende el LED y OFF lo apaga. El sistema también envía mensajes de confirmación.
+
+La función trim() ayuda a reconocer correctamente los comandos. Al activar pruebaRetraso, se introduce una pausa de un segundo que permite observar cómo cambia el tiempo de respuesta.
+
+## 6. Conclusión
+
+En esta práctica se aprendió a utilizar la comunicación Bluetooth del ESP32 para controlar un LED desde un teléfono Android. También se comprendió cómo recibir comandos, ejecutar acciones y enviar respuestas. Finalmente, la prueba de retraso permitió observar la importancia del tiempo de respuesta en un sistema de control.
