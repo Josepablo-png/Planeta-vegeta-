@@ -2,8 +2,8 @@
 
 **Equipo**:
 
- - Nombre integrante 1
- - Nombre integrante 2
+ - Carlos Mario Diaz Moscoso
+ - José Pablo Sánchez Guerrero
 
 **Contacto**: 
 
