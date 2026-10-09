@@ -69,3 +69,6 @@ Con esta práctica aprendimos a utilizar la comunicación Bluetooth del ESP32 pa
 Además, observamos que agregar un retraso al programa puede afectar el tiempo de respuesta. Esto nos ayudó a entender la importancia de considerar los tiempos de ejecución al programar un sistema electrónico.
 
 En general, la práctica nos permitió aplicar lo aprendido en clase y conocer una forma sencilla de controlar componentes electrónicos sin necesidad de conectarlos directamente a un dispositivo de control mediante cables de comunicación.
+
+
+*Se uso IA para darle formato y un tono mas formal a la practica*
