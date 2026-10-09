@@ -45,7 +45,62 @@ Además, programamos el ESP32 para que enviara una respuesta al teléfono despu�
 También utilizamos la función `trim()` para eliminar espacios y caracteres adicionales que pudieran afectar la lectura de los comandos. Por último, incluimos una opción para agregar un retraso de un segundo y observar cómo cambiaba el tiempo de respuesta del sistema.
 
 ## 4. Código utilizado
+#include "BluetoothSerial.h"
 
+BluetoothSerial bluetooth;
+
+// Pin utilizado para el LED
+#define pinLed 23
+
+// Variable para activar la prueba de retraso
+bool pruebaRetraso = false;
+
+void setup() {
+  Serial.begin(115200);
+
+  // Iniciar Bluetooth
+  bluetooth.begin("ESP32_LED");
+  bluetooth.setTimeout(20);
+
+  pinMode(pinLed, OUTPUT);
+  digitalWrite(pinLed, LOW);
+
+  Serial.println("Bluetooth listo para conectarse.");
+}
+
+void loop() {
+
+  // Revisar si llegó un mensaje por Bluetooth
+  if (bluetooth.available()) {
+
+    String comando = bluetooth.readStringUntil('\n');
+
+    // Eliminar espacios y caracteres adicionales
+    comando.trim();
+
+    Serial.print("Mensaje recibido: ");
+    Serial.println(comando);
+
+    if (comando == "ON") {
+      digitalWrite(pinLed, HIGH);
+      bluetooth.println("LED encendido");
+    }
+
+    else if (comando == "OFF") {
+      digitalWrite(pinLed, LOW);
+      bluetooth.println("LED apagado");
+    }
+
+    else {
+      bluetooth.println("Comando incorrecto");
+    }
+  }
+
+  // Prueba de retraso
+  if (pruebaRetraso) {
+    delay(1000);
+  }
+}
 
 ## 5. Resultados y observaciones
 
