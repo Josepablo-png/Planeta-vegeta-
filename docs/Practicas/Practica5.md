@@ -102,6 +102,9 @@ void loop() {
   }
 }
 
+![Codigo5](../recursos/imgs/codigo5.jpg){loading=lazy}
+
+
 ## 5. Resultados y observaciones
 
 Durante la práctica logramos establecer la conexión Bluetooth entre el teléfono Android y el ESP32. Después de emparejar los dispositivos, pudimos enviar comandos desde la aplicación y comprobar que el LED respondía correctamente.
@@ -111,6 +114,9 @@ Al enviar `ON`, el LED conectado al GPIO 23 se encendía, mientras que con el co
 Otro aspecto importante fue utilizar un teléfono Android para realizar la conexión y trabajar con la aplicación de terminal Bluetooth que empleamos durante la actividad.
 
 Por último, revisamos el efecto de agregar un retraso de un segundo. Esto nos permitió entender que el tiempo de espera dentro del programa puede hacer que el sistema tarde más en responder a los comandos. Así pudimos relacionar lo que vimos en el código con el comportamiento del circuito.
+
+![LB1](../recursos/imgs/LB1.jpg){loading=lazy}
+![LB2](../recursos/imgs/LB2.jpg){loading=lazy}
 
 ## 6. Conclusión
 
