@@ -64,13 +64,14 @@ nav:
       - "Practica 4": Practicas/Practicas4.md
       - "Practica 5": Practicas/Practicas5.md
       - "Practica 6": Practicas/Practicas6.md    
-    -"Practicas-Carlos-Mario":
+  - "Practicas-Oliver-Carlos-Mario":
       - "Practica 1": Practicas/PracticasCarl1.md
       - "Practica 2": Practicas/PracticasCarl2.md
       - "Practica 3": Practicas/PracticasCCarl3.md
       - "Practica 4": Practicas/PracticasCCarl4.md
       - "Practica 5": Practicas/PracticasCCarl5.md
       - "Practica 6": Practicas/PracticasCCarl6.md
+
   - "Proyectos":
       - "Proyecto 1": Proyectos/Proyecto1.md
   - "Reflexiones":
