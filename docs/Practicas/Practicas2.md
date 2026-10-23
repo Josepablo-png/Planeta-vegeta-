@@ -32,3 +32,4 @@ Posterior a la clase previa sobre corte láser impartida por el profesor Oliver,
 ![LB2](../recursos//archivos/arriba%201.SLDPRT){loading=lazy}
 ![LB2](../recursos//archivos/cola%201.SLDPRT){loading=lazy}
 ![LB2](../recursos//archivos/lado%201.SLDPRT){loading=lazy}
+![LB2](../recursos//archivos/avioncito%201.SLDASM){loading=lazy}
