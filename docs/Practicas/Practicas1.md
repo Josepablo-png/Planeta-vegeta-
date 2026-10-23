@@ -13,3 +13,5 @@ Además, nos explicó los distintos materiales que pueden utilizarse en las impr
 
 ### Desarrollo y Resultado
 Como práctica principal de esta clase, se realizó un revolucionado tipo cebolla con un anillo alrededor, utilizando una separación/tolerancia de **0.25 mm**.
+
+![LB2](../recursos/imgs/Cebollita2.jpg){loading=lazy}
