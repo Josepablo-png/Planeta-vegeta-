@@ -1,4 +1,4 @@
-## Práctica 1: La cebolla 🧅
+## Práctica 1: La cebolla 
 
 En esta clase, el profesor Oliver nos enseñó varios mecanismos impresos en 3D con el objetivo de comprender el funcionamiento de las tolerancias y ciertos mecanismos impresos, evitando fallas al momento de la impresión o uso. En su mayoría, eran piezas únicas con mecanismos ya integrados, conocimiento que aplicamos en nuestra práctica de impresión 3D.
 
