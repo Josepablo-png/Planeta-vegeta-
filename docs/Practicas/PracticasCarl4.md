@@ -20,7 +20,9 @@ Durante el proceso en SolidWorks, se aplicaron diversas herramientas fundamental
 * **Redondeos (Fillets):** Aplicados estratégicamente para suavizar aristas, reducir concentraciones de esfuerzos y permitir el juego mecánico libre entre los ejes[cite: 4].
 * **Ensamblajes:** Esenciales para verificar la cinemática, el rango de movimiento y el correcto acoplamiento de las piezas antes de exportar el archivo definitivo a formato STL[cite: 4].
 
-![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](ruta/a/tu/foto_fantasma_cad.jpg)
+![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/fantadxf.jpg)
+![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/Fanta.jpg)
+![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/Union%20fanta.jpg)
 
 ---
 
@@ -38,7 +40,7 @@ Una vez finalizado el diseño en CAD, la preparación del código G se realizó 
 * **Corte y orientación:** Dominio de las herramientas de posición para acomodar la pieza de manera óptima sobre la cama de impresión[cite: 4].
 * **Soportes:** Gracias a la geometría optimizada y las tolerancias del diseño en SolidWorks, esta pieza no requirió soportes[cite: 4]. Este dominio del software permitió además orientar y apoyar a compañeros de clase en la configuración de soportes y parámetros para sus propios proyectos[cite: 4].
 
-![Laminado en PrusaSlicer (sin soportes) y pieza física impresa terminada](ruta/a/tu/foto_fantasma_final.jpg)
+![Laminado en PrusaSlicer (sin soportes) y pieza física impresa terminada](../recursos/imgs/fantasmaimpreso.jpg)
 
 ---
 

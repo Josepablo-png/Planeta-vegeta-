@@ -11,6 +11,9 @@
   * **Prevención de colisiones:** Identificar si existen movimientos erróneos en los ejes o profundidades de corte excesivas (Z) antes de enviarlas al controlador de la máquina real.
 * **Traducción cinemática:** Entender la lógica matemática detrás de los comandos numéricos y cómo el software traduce los vectores en instrucciones físicas para los motores.
 
+![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/codigo6767.jpg)
+![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/codigo67.jpg)
+
 ---
 
 ## 2. Programación y Control en G-Code
@@ -54,6 +57,10 @@ El código G y el código M son los lenguajes estandarizados utilizados para ind
 
 ### 2.2. Simulación y Validación en NC Viewer (Ejercicio del Pentagrama)[cite: 5]
 Como parte del aprendizaje práctico en clase con el maestro Oliver, pusimos a prueba la lógica de coordenadas y la estructura del código G realizando la simulación de un pentagrama en la plataforma NC Viewer[cite: 5]. Interpretamos y verificamos líneas de código como los posicionamientos rápidos (`G00`), los avances lineales de corte (`G01`) y las interpolaciones circulares (`G02`), observando de qué manera la herramienta ejecuta la geometría en el plano 2D/3D antes de pasar al equipo real[cite: 5]:
+
+![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/camafresa.jpg)
+![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/Fresa.jpg)
+![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/finalcarl.jpg)
 
 ```gcode
 G21

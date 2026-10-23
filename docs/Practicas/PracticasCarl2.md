@@ -21,7 +21,7 @@ En esta sesión trabajamos la integración entre el diseño paramétrico en Soli
 ### 3.1. Proceso de Adaptación y Rediseño
 Para el desarrollo de mi entregable individual elegí fabricar un modelo de avión. El proceso comenzó tomando como base una plantilla que fui calcando para generar el perfil de las piezas. Sin embargo, el diseño original resultaba ser bastante complejo y no contaba aún con los conocimientos necesarios para llevar a cabo ciertos grabados o partes muy elaboradas que incluía. Por esta razón, tomé la decisión de modificar bastante el diseño original, simplificando la pieza y enfocándome en ajustar los puntos clave de ensamble para que fuera completamente funcional en MDF.
 
-![Modelo tridimensional del avión y ensamble de piezas planas en SolidWorks](ruta/a/tu/foto_modelo_avion.jpg)
+![Modelo tridimensional del avión y ensamble de piezas planas en SolidWorks](../recursos/imgs/Avionen.jpg)
 
 ### 3.2. Preparación de Archivos (.DXF) y Anidado (Nesting)
 Una vez definidas las formas y estructuras de las piezas:
@@ -29,7 +29,7 @@ Una vez definidas las formas y estructuras de las piezas:
 - **Paso 2:** Cada pieza se pasó a un archivo plano en formato `.DXF` (Drawing Exchange Format) para poder enviarlas al software del láser.
 - **Paso 3:** Dentro del programa de control de la máquina se realizó el anidado (*nesting*), acomodando y distribuyendo todas las piezas para ahorrar el mayor espacio posible dentro de la lámina de MDF y reducir el desperdicio.
 
-![Distribución de las piezas en formato .DXF](ruta/a/tu/foto_dxf_nesting.jpg)
+![Distribución de las piezas en formato .DXF](../recursos/imgs/Aviondxf.jpg)
 
 ### 3.3. Manufactura y Proceso de Corte Láser
 El proceso de corte contó en un inicio con la guía y supervisión directa del profesor Oliver, quien nos ayudó al momento de imprimir con láser nuestras piezas. Sin embargo, debido a que tuve algunos problemas con las tolerancias al intentar armarlo la primera vez, tuve que ir personally después al área de corte láser para hacer los ajustes necesarios e imprimir las piezas por mi cuenta. Gracias a que ya había observado atentamente cómo el maestro seguía todos los pasos para un buen corte y a que había practicado previamente, pude operar el equipo solo y lograr que la impresión saliera de manera correcta.
@@ -37,7 +37,7 @@ El proceso de corte contó en un inicio con la guía y supervisión directa del 
 ---
 
 ## 4. Galería del Prototipo Final
-![Prototipo terminado: Avión de MDF ensamblado](ruta/a/tu/foto_avion_final.jpg)
+![Prototipo terminado: Avión de MDF ensamblado](../recursos/imgs/Avionfin.jpg)
 
 ---
 

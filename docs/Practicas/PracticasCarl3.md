@@ -29,7 +29,9 @@ Para poner en práctica lo aprendido, tomamos mediciones en cinco cubos de prueb
 | **Cubo 11** | $31.265\text{ mm}$[cite: 3] | $27.162\text{ mm}$[cite: 3] | $28.452\text{ mm}$[cite: 3] |
 | **Cubo 12** | $29.215\text{ mm}$[cite: 3] | $33.845\text{ mm}$[cite: 3] | $26.885\text{ mm}$[cite: 3] |
 
-![Registro de lectura con micrómetro digital y calibrador vernier sobre los cubos de prueba](ruta/a/tu/foto_micrometro_vernier.jpg)
+![Registro de lectura con micrómetro digital y calibrador vernier sobre los cubos de prueba](../recursos/imgs/cubo67.jpg)
+![Registro de lectura con micrómetro digital y calibrador vernier sobre los cubos de prueba](../recursos/imgs/Vernier2.jpg)
+![Registro de lectura con micrómetro digital y calibrador vernier sobre los cubos de prueba](../recursos/imgs/micro.jpg)
 
 #### Mediciones con Calibrador Vernier (Resolución en centésimas de milímetro, $\text{mm}$)[cite: 3]:
 | Cubo | A (Ancho) | L (Largo) | H (Alto) |
@@ -46,7 +48,8 @@ Para poner en práctica lo aprendido, tomamos mediciones en cinco cubos de prueb
 * **Fresadora (Titanium TMD-50PRO):** El maestro nos remarcó una diferencia clave en el taller: la broca únicamente perfora de forma vertical (eje Z), mientras que la fresa tiene filos a los lados y al frente, permitiendo cortar también horizontalmente (ejes X, Y) para hacer desbastes, ranuras y aplanados. Nos enseñó el cabezal, la perilla de RPM y el manejo de la mesa mediante manivelas, explicándonos la regla de empape (no comer más de la mitad del diámetro de la fresa a lo ancho) para no sobrecalentar el material ni romper la herramienta.[cite: 3]
 * **Sierra de Cinta para Madera (Urrea):** Revisamos esta máquina de banco que utiliza una cinta metálica con dientes sobre poleas para hacer cortes continuos tanto rectos como con curva en madera.[cite: 3]
 
-![Cabezal de la fresadora Titanium TMD-50PRO y sierra de cinta Urrea](ruta/a/tu/foto_fresadora_sierra.jpg)
+![Cabezal de la fresadora Titanium TMD-50PRO y sierra de cinta Urrea](../recursos/imgs/sierracinta.jpg)
+![Cabezal de la fresadora Titanium TMD-50PRO y sierra de cinta Urrea](../recursos/imgs/Fresa.jpg)
 
 ---
 
@@ -54,14 +57,14 @@ Para poner en práctica lo aprendido, tomamos mediciones en cinco cubos de prueb
 * **Guillotina Mecánica Manual:** El profesor nos mostró cómo se utiliza para hacer cortes rectos en láminas delgadas presionando la palanca inferior de pedal.[cite: 3]
 * **Dobladora de Lámina (Prensa de Doblado Dynamo):** Nos explicó su función para hacer pliegues y pestañas angulares uniformes al bajar la cortina o regla superior sobre la matriz de la pieza.[cite: 3]
 
-![Guillotina mecánica manual y dobladora de lámina Dynamo](ruta/a/tu/foto_guillotina_dobladora.jpg)
-
+![Guillotina mecánica manual y dobladora de lámina Dynamo](../recursos/imgs/guillotina2.jpg)
+![Guillotina mecánica manual y dobladora de lámina Dynamo](../recursos/imgs/dobladora.jpg)
 ---
 
 ## 5. Procesos de Unión: Soldadora por Puntos
 Por último, el profesor Oliver nos mostró cómo opera la soldadura por resistencia, la cual une dos láminas de metal al presionarlas con dos electrodos de cobre y soltar un chispazo rápido de alta corriente que funde el punto de contacto sin necesitar material de aporte.[cite: 3]
 
-![Soldadora por puntos por resistencia con electrodos de cobre](ruta/a/tu/foto_soldadora_puntos.jpg)
+![Soldadora por puntos por resistencia con electrodos de cobre](../recursos/imgs/solpunt.jpg)
 
 ---
 
