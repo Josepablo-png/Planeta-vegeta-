@@ -1,32 +1,53 @@
-## Práctica 1: Modelado de Mecanismo Concéntrico Articulado en SolidWorks
-Fecha: 18 de septiembre de 2026
+Institución: Universidad Iberoamericana Puebla (Ibero Puebla)  
+Materia: Proyecto de Ingeniería  
+Alumno: Carlos Mario Díaz Moscoso  
+Profesor: Oliver Ochoa García  
 
-### Introducción y Objetivo de la Clase
-En esta sesión nos enfocamos en aprender los conceptos clave de diseño para prepararnos en la creación de piezas articuladas y con movimiento en SolidWorks. El objetivo principal fue entender cómo estructurar un mecanismo tipo Print-in-Place a nivel digital, logrando que una sola pieza contenga partes móviles independientes diseñadas directamente desde el croquis.
+# Práctica 1: Modelado de Mecanismo Concéntrico Articulado en SolidWorks
+**Fecha:** 18 de septiembre de 2026
 
-### Guía de Materiales, Ventajas y Desventajas
+---
+
+## 1. Introducción y Objetivo de la Clase
+En esta sesión con el maestro Oliver, nos enfocamos en aprender los conceptos clave de diseño para prepararnos en la creación de piezas articuladas y con movimiento en SolidWorks. El objetivo principal fue entender cómo estructurar un mecanismo tipo *Print-in-Place* a nivel digital, logrando que una sola pieza contenga partes móviles independientes diseñadas directamente desde el croquis.
+
+---
+
+## 2. Guía de Materiales, Ventajas y Desventajas
 Durante la clase revisamos los filamentos de uso frecuente en impresión 3D FDM, comprendiendo sus propiedades térmicas, ventajas y desventajas al momento de seleccionar el material adecuado para un proyecto:
 
-| Material | Temp. Boquilla | Temp. Cama | Ventajas Principales | Desventajas / Consideraciones |
-| :--- | :--- | :--- | :--- | :--- |
-| PLA (Ácido Poliláctico) | $190^\circ\text{C} - 220^\circ\text{C}$ | $45^\circ\text{C} - 60^\circ\text{C}$ | Biodegradable, muy fácil de imprimir, buena rigidez. | Baja resistencia térmica y mecánica (se deforma a $> 50^\circ\text{C}$). |
-| PETG | $230^\circ\text{C} - 250^\circ\text{C}$ | $70^\circ\text{C} - 80^\circ\text{C}$ | Resistente al impacto y química, impermeable, fácil impresión. | Propenso a hilado (stringing), absorbe humedad. |
-| ABS | $230^\circ\text{C} - 260^\circ\text{C}$ | $90^\circ\text{C} - 110^\circ\text{C}$ | Alta resistencia térmica y mecánica, fácil de pulir. | Requiere impresora cerrada, emite vapores nocivos. |
-| TPU (Flexible) | $210^\circ\text{C} - 230^\circ\text{C}$ | $30^\circ\text{C} - 60^\circ\text{C}$ | Gran elasticidad, resistente al desgaste y amortiguador. | Difícil de imprimir, velocidad lenta, sensible a la humedad. |
-| PC (Policarbonato) | $260^\circ\text{C} - 310^\circ\text{C}$ | $100^\circ\text{C} - 120^\circ\text{C}$ | Extremadamente resistente al impacto y altas temperaturas. | Muy difícil de imprimir, requiere alta temperatura de cama y boquilla. |
+| Material | Temp. Boquilla | Temp. Cama | Ventajas Principales / Desventajas |
+| :--- | :--- | :--- | :--- |
+| **PLA** | $190^\circ\text{C} - 220^\circ\text{C}$ | $50^\circ\text{C} - 60^\circ\text{C}$ | Fácil de imprimir, económico, biodegradable, sin warping. <br> - Baja resistencia térmica ($> 60^\circ\text{C}$), frágil. |
+| **ABS** | $230^\circ\text{C} - 250^\circ\text{C}$ | $80^\circ\text{C} - 110^\circ\text{C}$ | Alta resistencia al impacto, buena estabilidad térmica, fácil de pulir. <br> - Warp severo, vapores nocivos, requiere cabina cerrada. |
+| **PETG** | $230^\circ\text{C} - 250^\circ\text{C}$ | $70^\circ\text{C} - 80^\circ\text{C}$ | Excelente adherencia, resistente a químicos e impactos, sin cabina. <br> - Tiende a dejar hilos (stringing) y se raya fácilmente. |
+| **Nylon (PA)** | $240^\circ\text{C} - 260^\circ\text{C}$ | $70^\circ\text{C} - 100^\circ\text{C}$ | Extremadamente duradero, flexible bajo alta tensión, bajo coeficiente de fricción. <br> - Higroscópico (absorbe humedad), complejo de adherir. |
+| **TPU** | $210^\circ\text{C} - 230^\circ\text{C}$ | $20^\circ\text{C} - 60^\circ\text{C}$ | Gran elasticidad, alta resistencia al desgaste, amortiguación. <br> - Velocidad lenta, requiere extrusor directo. |
 
-### Tolerancias para Diseños Print-in-Place
-Aprendimos que la tolerancia (holgura entre paredes móviles) determina el éxito de la articulación sin necesidad de ensamblaje posterior:
-- Tolerancia recomendada: $0.3\text{ mm} - 0.4\text{ mm}$ para un libre movimiento.
-- Tolerancia ajustada: $0.2\text{ mm}$ (requiere impresoras muy bien calibradas).
+---
 
-### Metodología de Modelado en SolidWorks
-#### Croquis Base Concéntrico: Se inició en el plano Planta dibujando circunferencias concéntricas concuerden con los diámetros interno y externo del mecanismo.
-#### Definición de Cotas y Holgura:
-  - Diámetro interior del núcleo: $D_1 = 20\text{ mm}$.
-  - Anillo intermedio con holgura radial $\delta = 0.4\text{ mm}$.
-  - Diámetro exterior total: $D_2 = 60\text{ mm}$.
-#### Estructura Interna del Eje: Se diseñaron topes cónicos inclinados a $45^\circ$ para evitar la separación vertical de las piezas respetando las capacidades de puentes (bridging) de la impresión FDM.
-### Operación Extrusión y Sólidos Multicuerpo: Se utilizó Extruir saliente/base desactivando la opción "Fusionar resultado" para mantener los cuerpos sólidos independientes en un solo archivo.
+## 3. Puntos Clave de Diseño para Piezas Articuladas
+* **Tolerancias de separación:** Se debe dejar un espacio libre adecuado entre las piezas móviles adyacentes para asegurar el juego mecánico y evitar fusiones indeseadas.
+* **Ángulo de voladizo:** Las superficies con inclinaciones pronunciadas requieren consideraciones geométricas en los perfiles para que puedan fabricarse adecuadamente.
+* **Orientación geométrica:** Planear la disposición de los elementos considerando cómo se comportarán las uniones y las tensiones estructurales.
+* **Estrategia de relleno (Infill):** Uso de porcentajes moderados y patrones adecuados según las necesidades del modelo.
 
-Figura 1: Vista transversal del modelado concéntrico articulado mostrando las holguras inter-cuerpos.
+---
+
+## 4. Ejercicio Práctico en SolidWorks
+Como práctica principal, modelamos una pieza concéntrica articulada (tipo 'cebolla') aplicando los siguientes pasos:
+* **Uso de la Herramienta Revolución:** En SolidWorks elaboramos el croquis con el perfil de los anillos —empleando formas esféricas cóncavas y convexas— y aplicamos la operación de Saliente/Base Revolucionado para generar la geometría tridimensional concéntrica.
+* **Holgura específica de $0.25\text{ mm}$:** En el croquis se estableció una separación exacta de $0.25\text{ mm}$ entre cada anillo vecino para asegurar el espacio libre necesario entre las partes móviles.
+* **Geometría de topes:** Las curvas diseñadas mediante la revolución actúan como topes mecánicos que impiden que los anillos se salgan verticalmente de su posición, permitiendo únicamente su movimiento deslizante entre ellos.
+
+---
+
+## 5. Evidencia Visual del Proyecto
+![LB2](../recursos/imgs/Cebollita2.jpg){loading=lazy}
+![LB2](../recursos/imgs/cebollita.jpg){loading=lazy}
+
+---
+
+## 6. Conclusión
+En lo personal, esta práctica me sirvió muchísimo para entender cómo planear y diseñar piezas articuladas desde cero en SolidWorks. Comprender la importancia de dejar la tolerancia exacta —como los $0.25\text{ mm}$ en los anillos concéntricos— y usar herramientas como la revolución me hizo ver lo crucial que es anticiparse a la impresión 3D. Al final, es un proceso de ir afinando detalles para que las partes realmente se muevan sin fundirse, lo cual hace que todo cobre sentido al momento de fabricarlo.
+

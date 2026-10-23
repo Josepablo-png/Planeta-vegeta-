@@ -1,27 +1,45 @@
-## Práctica 2: Pruebas de Calibración e Impresión del Mecanismo Articulado
-Fecha: 25 de septiembre de 2026
+# Práctica 2: Ensambles en SolidWorks y Corte Láser (Avión a Escala en MDF)
+**Fecha:** 24 de septiembre de 2026
 
-### Introducción y Objetivo
-En la segunda sesión pasamos del modelo digital a la fabricación física mediante la tecnología FDM. El objetivo fue realizar pruebas de calibración de flujo, tolerancia e impresión del mecanismo articulado proyectado en la Práctica 1.
+---
 
-### Preparación del Archivo en el Laminador (Slicer)
-Se importó el archivo STL a Bambu Studio / Ultimaker Cura configurando los siguientes parámetros de proceso para PLA:
-- Altura de capa: $0.2\text{ mm}$.
-- Relleno (Infill): $20\%$ con patrón Giroide para resistencia estructural multidireccional.
-- Soportes: Desactivados (se validó que los ángulos de voladizo fueran inferiores a $45^\circ$).
-- Adherencia a la placa: Falda (Skirt) simple de 2 líneas.
+## 1. Introducción y Fundamentos Técnicos
+En esta sesión trabajamos la integración entre el diseño paramétrico en SolidWorks y la manufactura digital mediante corte láser CNC. Al diseñar piezas que se construyen a partir de láminas planas ensambladas por presión (press-fit), es fundamental considerar los parámetros físicos del proceso desde la etapa inicial del dibujo:
+- **Kerf (Ancho de sangría):** Representa el espesor de material que el haz láser vaporiza o remueve al seguir la trayectoria de corte. Si no se contempla este margen en las cotas, las ranuras quedan más anchas de lo planificado y los dientes de ensamble más delgados, provocando que la estructura quede floja.
+- **Tolerancias dimensionales en MDF:** El material base utilizado para el prototipo fue MDF. Dado que las láminas de este material presentan ligeras variaciones de espesor, fue necesario calcular y aplicar tolerancias especializadas en las uniones para lograr que cada pieza embonara a presión de forma firme.
 
-### Pruebas de Tolerancia Muestra (Tolerance Test)
-Antes de lanzar el mecanismo completo, se imprimió un espécimen de prueba con varias tolerancias horizontales ($0.1\text{ mm}$, $0.2\text{ mm}$, $0.3\text{ mm}$, $0.4\text{ mm}$, $0.5\text{ mm}$).
-Figura 2: Prueba de tolerancias post-impresión para validación de holgura de movimiento.
+---
 
-Resultados del test:
-- Las cavidades de $0.1\text{ mm}$ y $0.2\text{ mm}$ quedaron totalmente fusionadas (welded).
-- La holgura de $0.3\text{ mm}$ requirió un esfuerzo mecánico moderado para liberarse.
-- La holgura de $0.4\text{ mm}$ giró de manera fluida inmediatamente al retirar la pieza de la cama.
+## 2. Clasificación de Materiales en Corte Láser
+- **Materiales Permitidos:** MDF, madera triplay, papel, cartón, acrílico, fieltro, telas sintéticas/algodón y cuero natural.
+- **Materiales Estrictamente Prohibidos:** PVC, vinil y cuerina artificial (liberan gas cloro altamente corrosivo y tóxico), Policarbonato/Lexan (se quema, absorbe mal la luz y genera demasiado humo), ABS (libera vapores de cianuro), HDPE y espuma de poliestireno/unicel (riesgo extremo de incendio e inflamación rápida).
 
-### Impresión Final y Verificación
-Con base en la prueba, se confirmó la tolerancia de $0.4\text{ mm}$ configurada en SolidWorks y se procedió a imprimir el mecanismo concéntrico completo.
-- Tiempo de impresión: $42\text{ minutos}$.
-- Consumo de material: $14.5\text{ g}$.
-- Evaluación final: La pieza articulada se liberó con un suave giro manual, logrando una rotación limpia de $360^\circ$ sin trabas.
+---
+
+## 3. Desarrollo del Proyecto: Avión Escala en MDF
+
+### 3.1. Proceso de Adaptación y Rediseño
+Para el desarrollo de mi entregable individual elegí fabricar un modelo de avión. El proceso comenzó tomando como base una plantilla que fui calcando para generar el perfil de las piezas. Sin embargo, el diseño original resultaba ser bastante complejo y no contaba aún con los conocimientos necesarios para llevar a cabo ciertos grabados o partes muy elaboradas que incluía. Por esta razón, tomé la decisión de modificar bastante el diseño original, simplificando la pieza y enfocándome en ajustar los puntos clave de ensamble para que fuera completamente funcional en MDF.
+
+![Modelo tridimensional del avión y ensamble de piezas planas en SolidWorks](ruta/a/tu/foto_modelo_avion.jpg)
+
+### 3.2. Preparación de Archivos (.DXF) y Anidado (Nesting)
+Una vez definidas las formas y estructuras de las piezas:
+- **Paso 1:** Se generaron las vistas planas a escala real $1:1$ dentro del módulo de dibujo de SolidWorks.
+- **Paso 2:** Cada pieza se pasó a un archivo plano en formato `.DXF` (Drawing Exchange Format) para poder enviarlas al software del láser.
+- **Paso 3:** Dentro del programa de control de la máquina se realizó el anidado (*nesting*), acomodando y distribuyendo todas las piezas para ahorrar el mayor espacio posible dentro de la lámina de MDF y reducir el desperdicio.
+
+![Distribución de las piezas en formato .DXF](ruta/a/tu/foto_dxf_nesting.jpg)
+
+### 3.3. Manufactura y Proceso de Corte Láser
+El proceso de corte contó en un inicio con la guía y supervisión directa del profesor Oliver, quien nos ayudó al momento de imprimir con láser nuestras piezas. Sin embargo, debido a que tuve algunos problemas con las tolerancias al intentar armarlo la primera vez, tuve que ir personally después al área de corte láser para hacer los ajustes necesarios e imprimir las piezas por mi cuenta. Gracias a que ya había observado atentamente cómo el maestro seguía todos los pasos para un buen corte y a que había practicado previamente, pude operar el equipo solo y lograr que la impresión saliera de manera correcta.
+
+---
+
+## 4. Galería del Prototipo Final
+![Prototipo terminado: Avión de MDF ensamblado](ruta/a/tu/foto_avion_final.jpg)
+
+---
+
+## 5. Conclusión
+Esta práctica fue un trabajo bastante retador por mi parte y la verdad le puse mucho esfuerzo para que saliera bien. Adaptar un diseño complejo a mis conocimientos actuales, corregir los problemas de tolerancia específicos para el MDF y exportar los planos a formato `.DXF` me dejó un gran aprendizaje. Además, haber solucionado los detalles por mi cuenta e ir a cortar las piezas de forma independiente me dio mucha confianza para usar la cortadora láser en proyectos futuros.
