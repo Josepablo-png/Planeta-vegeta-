@@ -51,3 +51,4 @@ Esta práctica fue un trabajo bastante retador por mi parte y la verdad le puse 
 ![LB2](../recursos//archivos/arriba%201.SLDPRT){loading=lazy}
 ![LB2](../recursos//archivos/cola%201.SLDPRT){loading=lazy}
 ![LB2](../recursos//archivos/lado%201.SLDPRT){loading=lazy}
+![LB2](../recursos//archivos/avioncito%201.SLDASM){loading=lazy}
