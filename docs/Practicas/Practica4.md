@@ -94,26 +94,27 @@ Se divide entre dos porque la señal realiza un recorrido de ida y vuelta.
 
 ### Resultados del sensor ultrasónico
 
-| Medición | Distancia de referencia (cm) | Distancia medida (cm) | Error (cm) |
-|---|---:|---:|---:|
-| 1 | 10 | 10.3 | 0.3 |
-| 2 | 20 | 19.7 | 0.3 |
-| 3 | 30 | 30.5 | 0.5 |
-| 4 | 40 | 39.4 | 0.6 |
-| 5 | 50 | 50.8 | 0.8 |
+| Punto | Distancia de referencia (cm) | Eco ($\mu$s) | Distancia calculada (cm) | Error (cm) | LED |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Mínimo | 10 | 583 | 10 | 0 | Encendido   |
+| 25% | 18 | 1056 | 18.11 | 0.11 | Encendido   |
+| 50% | 26 | 1531 | 26.26 | 0.26 | Encendido   |
+| 75% | 34 | 1999 | 34.28 | 0.28 | Apagado   |
+| Máximo | 42 | 2467 | 42.31 | 0.31 | Apagado   |
 
 Los resultados muestran que las mediciones del sensor fueron bastante cercanas a las distancias de referencia. Sin embargo, hubo pequeñas diferencias debido a factores como la posición del objeto, el rebote de las ondas ultrasónicas y posibles variaciones en la lectura del sensor.
 
 El error se calculó mediante:
 `Error = |Distancia de referencia - Distancia medida|`
 
-
+![Codigo 4](../recursos/imgs/Armadosen.jpg){loading=lazy}
+![Codigo 4](../recursos/imgs/Armado%20sen.jpg){loading=lazy}
 ---
 
 ## 5. Código utilizado
 
 
-![Codigo 4](../recursos/imgs/Codigo4.jpg){loading=lazy}
+![Codigo 4](../recursos/imgs/Codigosen.jpg){loading=lazy}
 
 ---
 
