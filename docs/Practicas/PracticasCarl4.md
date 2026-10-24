@@ -46,3 +46,9 @@ Una vez finalizado el diseño en CAD, la preparación del código G se realizó 
 
 ## 5. Conclusión  
 En lo personal, esta práctica me sirvió muchísimo para soltarme más con SolidWorks y entender cómo llevar una idea propia hasta la impresora 3D  . Me di cuenta de lo clave que es calcular bien las tolerancias desde el croquis —como los $0.45\text{ mm}$ que le dejé a los ejes— para que las partes no se peguen y el fantasma quede bien articulado  . Además, aprender a moverle a PrusaSlicer estuvo muy padre porque no solo me ayudó a sacar mi pieza sin necesitar soportes, sino que también pude echarle la mano a mis compañeros para configurar sus impresiones  .
+
+[Pieza1](../recursos//archivos/PIEZA1%20(1).SLDPRT){loading=lazy}
+[Pieza2](../recursos//archivos/PIEZA22%201.SLDPRT){loading=lazy}
+[Pieza3](../recursos//archivos/PIEZA3%201.SLDPRT){loading=lazy}
+[Ensamblaje solid](../recursos//archivos/Ensamblajefinalf%201.SLDASM){loading=lazy}
+[Ensamble](../recursos//archivos/Ensamblajefinalf.STL){loading=lazy}
