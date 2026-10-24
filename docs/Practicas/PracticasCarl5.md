@@ -35,28 +35,28 @@ El código G y el código M son los lenguajes estandarizados utilizados para ind
 | `G21` | Define el sistema de unidades en milímetros. | Unidades |
 | `G28` | Retorno automático al punto de referencia de la máquina (Home). | Referencia |
 | `G40` | Cancela la compensación de radio de la herramienta. | Compensación |
-| `G41` | Activa la compensación de radio a la izquierda del contorno. | Compensación[cite: 5] |
-| `G42` | Activa la compensación de radio a la derecha del contorno. | Compensación[cite: 5] |
-| `G43` | Activa la compensación de longitud de la herramienta. | Compensación[cite: 5] |
-| `G53` | Utiliza el sistema de coordenadas de la máquina (MCS). | Sistema Coord.[cite: 5] |
-| `G54` a `G59` | Selecciona Sistemas de Coordenadas de Trabajo (WCS). | Sistema Coord.[cite: 5] |
-| `G80` | Cancela los ciclos fijos (perforación, cajeado, roscado). | Ciclos Fijos[cite: 5] |
-| `G81` | Ciclo fijo de taladrado simple. | Ciclos Fijos[cite: 5] |
-| `G83` | Ciclo fijo de taladrado con descargas profundas (Peck Drilling). | Ciclos Fijos[cite: 5] |
-| `G90` | Programación en Coordenadas Absolutas. | Modo Coord.[cite: 5] |
-| `G91` | Programación en Coordenadas Incrementales. | Modo Coord.[cite: 5] |
-| `G92` | Establece temporalmente el sistema de coordenadas actual. | Modo Coord.[cite: 5] |
-| `X, Y, Z` | Coordenadas espaciales de posición en los ejes tridimensionales. | Posición[cite: 5] |
-| `I, J, K` | Distancias incrementales al centro de un arco en ejes X, Y, Z. | Parám. Arco[cite: 5] |
-| `F` | Velocidad de avance (Feed Rate, p. ej., F180 o F300). | Parám. Corte[cite: 5] |
-| `S` | Velocidad del husillo (Spindle Speed en RPM, p. ej., S18000). | Parám. Corte[cite: 5] |
-| `T` | Selección de número de herramienta (Tool). | Parám. Herram.[cite: 5] |
-| `M3` / `M03` | Encender el husillo en sentido horario (CW). | Función Aux. (M)[cite: 5] |
-| `M5` / `M05` | Apagar el husillo (Spindle Stop). | Función Aux. (M)[cite: 5] |
-| `M30` | Fin del programa, reinicio de ciclos y rebobinado. | Función Aux. (M)[cite: 5] |
+| `G41` | Activa la compensación de radio a la izquierda del contorno. | Compensación   |
+| `G42` | Activa la compensación de radio a la derecha del contorno. | Compensación   |
+| `G43` | Activa la compensación de longitud de la herramienta. | Compensación   |
+| `G53` | Utiliza el sistema de coordenadas de la máquina (MCS). | Sistema Coord.   |
+| `G54` a `G59` | Selecciona Sistemas de Coordenadas de Trabajo (WCS). | Sistema Coord.   |
+| `G80` | Cancela los ciclos fijos (perforación, cajeado, roscado). | Ciclos Fijos   |
+| `G81` | Ciclo fijo de taladrado simple. | Ciclos Fijos   |
+| `G83` | Ciclo fijo de taladrado con descargas profundas (Peck Drilling). | Ciclos Fijos   |
+| `G90` | Programación en Coordenadas Absolutas. | Modo Coord.   |
+| `G91` | Programación en Coordenadas Incrementales. | Modo Coord.   |
+| `G92` | Establece temporalmente el sistema de coordenadas actual. | Modo Coord.   |
+| `X, Y, Z` | Coordenadas espaciales de posición en los ejes tridimensionales. | Posición   |
+| `I, J, K` | Distancias incrementales al centro de un arco en ejes X, Y, Z. | Parám. Arco   |
+| `F` | Velocidad de avance (Feed Rate, p. ej., F180 o F300). | Parám. Corte   |
+| `S` | Velocidad del husillo (Spindle Speed en RPM, p. ej., S18000). | Parám. Corte   |
+| `T` | Selección de número de herramienta (Tool). | Parám. Herram.   |
+| `M3` / `M03` | Encender el husillo en sentido horario (CW). | Función Aux. (M)   |
+| `M5` / `M05` | Apagar el husillo (Spindle Stop). | Función Aux. (M)   |
+| `M30` | Fin del programa, reinicio de ciclos y rebobinado. | Función Aux. (M)   |
 
-### 2.2. Simulación y Validación en NC Viewer (Ejercicio del Pentagrama)[cite: 5]
-Como parte del aprendizaje práctico en clase con el maestro Oliver, pusimos a prueba la lógica de coordenadas y la estructura del código G realizando la simulación de un pentagrama en la plataforma NC Viewer[cite: 5]. Interpretamos y verificamos líneas de código como los posicionamientos rápidos (`G00`), los avances lineales de corte (`G01`) y las interpolaciones circulares (`G02`), observando de qué manera la herramienta ejecuta la geometría en el plano 2D/3D antes de pasar al equipo real[cite: 5]:
+### 2.2. Simulación y Validación en NC Viewer (Ejercicio del Pentagrama)  
+Como parte del aprendizaje práctico en clase con el maestro Oliver, pusimos a prueba la lógica de coordenadas y la estructura del código G realizando la simulación de un pentagrama en la plataforma NC Viewer  . Interpretamos y verificamos líneas de código como los posicionamientos rápidos (`G00`), los avances lineales de corte (`G01`) y las interpolaciones circulares (`G02`), observando de qué manera la herramienta ejecuta la geometría en el plano 2D/3D antes de pasar al equipo real  :
 
 ![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/camafresa.jpg)
 ![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/Fresa.jpg)

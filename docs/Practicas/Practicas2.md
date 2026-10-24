@@ -26,10 +26,10 @@ Posterior a la clase previa sobre corte láser impartida por el profesor Oliver,
 > **Nota:** Se tomaron en cuenta las consideraciones del **Kerf** (ancho de corte del láser) y las dimensiones exactas del MDF, tal como nos indicó el profesor Oliver en la clase teórica.
 
 *archivos*
-[LB2](../recursos//archivos/abajo%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/ala%20avion%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/anillo%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/arriba%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/cola%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/lado%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/avioncito%201.SLDASM){loading=lazy}
+[Abajo](../recursos//archivos/abajo%201.SLDPRT){loading=lazy}
+[Ala](../recursos//archivos/ala%20avion%201.SLDPRT){loading=lazy}
+[Anillo](../recursos//archivos/anillo%201.SLDPRT){loading=lazy}
+[Arriba](../recursos//archivos/arriba%201.SLDPRT){loading=lazy}
+[Cola](../recursos//archivos/cola%201.SLDPRT){loading=lazy}
+[Lado](../recursos//archivos/lado%201.SLDPRT){loading=lazy}
+[Ensamble](../recursos//archivos/avioncito%201.SLDASM){loading=lazy}

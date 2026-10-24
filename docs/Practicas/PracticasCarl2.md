@@ -45,10 +45,10 @@ El proceso de corte contó en un inicio con la guía y supervisión directa del 
 Esta práctica fue un trabajo bastante retador por mi parte y la verdad le puse mucho esfuerzo para que saliera bien. Adaptar un diseño complejo a mis conocimientos actuales, corregir los problemas de tolerancia específicos para el MDF y exportar los planos a formato `.DXF` me dejó un gran aprendizaje. Además, haber solucionado los detalles por mi cuenta e ir a cortar las piezas de forma independiente me dio mucha confianza para usar la cortadora láser en proyectos futuros.
 
 *archivos*
-[LB2](../recursos//archivos/abajo%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/ala%20avion%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/anillo%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/arriba%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/cola%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/lado%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/avioncito%201.SLDASM){loading=lazy}
+[Abajo](../recursos//archivos/abajo%201.SLDPRT){loading=lazy}
+[Ala](../recursos//archivos/ala%20avion%201.SLDPRT){loading=lazy}
+[Anillo](../recursos//archivos/anillo%201.SLDPRT){loading=lazy}
+[Arriba](../recursos//archivos/arriba%201.SLDPRT){loading=lazy}
+[Cola](../recursos//archivos/cola%201.SLDPRT){loading=lazy}
+[Lado](../recursos//archivos/lado%201.SLDPRT){loading=lazy}
+[Ensamble](../recursos//archivos/avioncito%201.SLDASM){loading=lazy}

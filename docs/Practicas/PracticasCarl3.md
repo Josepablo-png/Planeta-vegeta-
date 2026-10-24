@@ -14,26 +14,26 @@ Comenzamos la sesión reuniéndonos en el taller con el profesor Oliver, quien n
 
 ## 2. Metrología e Instrumentos de Medición
 Durante la primera parte de la práctica, el maestro nos fue mostrando las diferencias de uso y aplicación entre cada instrumento:
-* **Calibrador Vernier (Pie de Rey):** Aprendimos a tomar lecturas exteriores, interiores y de profundidad con un solo instrumento. También comparamos el vernier analógico contra el digital, notando lo ágil que es este último para leer directo en pantalla y cambiar unidades.[cite: 3]
-* **Micrómetro (Pálmer):** Nos mostró que es el instrument ideal para cuando requerimos máxima precisión en espesores o diámetros pequeños. En el modelo digital probamos la función INC (Incremental), la cual permite poner la pantalla en cero en cualquier punto para comparar diferencias de tamaño entre piezas de forma inmediata.[cite: 3]
+* **Calibrador Vernier (Pie de Rey):** Aprendimos a tomar lecturas exteriores, interiores y de profundidad con un solo instrumento. También comparamos el vernier analógico contra el digital, notando lo ágil que es este último para leer directo en pantalla y cambiar unidades.
+* **Micrómetro (Pálmer):** Nos mostró que es el instrument ideal para cuando requerimos máxima precisión en espesores o diámetros pequeños. En el modelo digital probamos la función INC (Incremental), la cual permite poner la pantalla en cero en cualquier punto para comparar diferencias de tamaño entre piezas de forma inmediata.
 
 ### 2.1. Registro Experimental de Mediciones en Cubos de Prueba
-Para poner en práctica lo aprendido, tomamos mediciones en cinco cubos de prueba utilizando ambos instrumentos[cite: 3]:
+Para poner en práctica lo aprendido, tomamos mediciones en cinco cubos de prueba utilizando ambos instrumentos :
 
-#### Mediciones con Micrómetro (Resolución en milésimas de milímetro, $\text{mm}$)[cite: 3]:
+#### Mediciones con Micrómetro (Resolución en milésimas de milímetro, $\text{mm}$) :
 | Identificador de Cubo | Ancho ($a$) | Largo ($l$) | Alto ($h$) |
 | :--- | :--- | :--- | :--- |
-| **Cubo 3** | $26.645\text{ mm}$[cite: 3] | $34.512\text{ mm}$[cite: 3] | $22.535\text{ mm}$[cite: 3] |
-| **Cubo 8** | $29.780\text{ mm}$[cite: 3] | $43.455\text{ mm}$[cite: 3] | $29.872\text{ mm}$[cite: 3] |
-| **Cubo 10** | $38.870\text{ mm}$[cite: 3] | $38.828\text{ mm}$[cite: 3] | Excede capacidad micrómetro[cite: 3] |
-| **Cubo 11** | $31.265\text{ mm}$[cite: 3] | $27.162\text{ mm}$[cite: 3] | $28.452\text{ mm}$[cite: 3] |
-| **Cubo 12** | $29.215\text{ mm}$[cite: 3] | $33.845\text{ mm}$[cite: 3] | $26.885\text{ mm}$[cite: 3] |
+| **Cubo 3** | $26.645\text{ mm}$  | $34.512\text{ mm}$  | $22.535\text{ mm}$  |
+| **Cubo 8** | $29.780\text{ mm}$  | $43.455\text{ mm}$  | $29.872\text{ mm}$  |
+| **Cubo 10** | $38.870\text{ mm}$  | $38.828\text{ mm}$  | Excede capacidad micrómetro  |
+| **Cubo 11** | $31.265\text{ mm}$  | $27.162\text{ mm}$  | $28.452\text{ mm}$  |
+| **Cubo 12** | $29.215\text{ mm}$  | $33.845\text{ mm}$  | $26.885\text{ mm}$  |
 
 ![Registro de lectura con micrómetro digital y calibrador vernier sobre los cubos de prueba](../recursos/imgs/cubo67.jpg)
 ![Registro de lectura con micrómetro digital y calibrador vernier sobre los cubos de prueba](../recursos/imgs/Vernier2.jpg)
 ![Registro de lectura con micrómetro digital y calibrador vernier sobre los cubos de prueba](../recursos/imgs/micro.jpg)
 
-#### Mediciones con Calibrador Vernier (Resolución en centésimas de milímetro, $\text{mm}$)[cite: 3]:
+#### Mediciones con Calibrador Vernier (Resolución en centésimas de milímetro, $\text{mm}$) :
 | Cubo | A (Ancho) | L (Largo) | H (Alto) |
 | :--- | :--- | :--- | :--- |
 | **5** | $25.89\text{ mm}$ | $28.09\text{ mm}$ | $23.35\text{ mm}$ |
@@ -45,8 +45,8 @@ Para poner en práctica lo aprendido, tomamos mediciones en cinco cubos de prueb
 ---
 
 ## 3. Maquinaria de Corte y Maquinado
-* **Fresadora (Titanium TMD-50PRO):** El maestro nos remarcó una diferencia clave en el taller: la broca únicamente perfora de forma vertical (eje Z), mientras que la fresa tiene filos a los lados y al frente, permitiendo cortar también horizontalmente (ejes X, Y) para hacer desbastes, ranuras y aplanados. Nos enseñó el cabezal, la perilla de RPM y el manejo de la mesa mediante manivelas, explicándonos la regla de empape (no comer más de la mitad del diámetro de la fresa a lo ancho) para no sobrecalentar el material ni romper la herramienta.[cite: 3]
-* **Sierra de Cinta para Madera (Urrea):** Revisamos esta máquina de banco que utiliza una cinta metálica con dientes sobre poleas para hacer cortes continuos tanto rectos como con curva en madera.[cite: 3]
+* **Fresadora (Titanium TMD-50PRO):** El maestro nos remarcó una diferencia clave en el taller: la broca únicamente perfora de forma vertical (eje Z), mientras que la fresa tiene filos a los lados y al frente, permitiendo cortar también horizontalmente (ejes X, Y) para hacer desbastes, ranuras y aplanados. Nos enseñó el cabezal, la perilla de RPM y el manejo de la mesa mediante manivelas, explicándonos la regla de empape (no comer más de la mitad del diámetro de la fresa a lo ancho) para no sobrecalentar el material ni romper la herramienta. 
+* **Sierra de Cinta para Madera (Urrea):** Revisamos esta máquina de banco que utiliza una cinta metálica con dientes sobre poleas para hacer cortes continuos tanto rectos como con curva en madera. 
 
 ![Cabezal de la fresadora Titanium TMD-50PRO y sierra de cinta Urrea](../recursos/imgs/sierracinta.jpg)
 ![Cabezal de la fresadora Titanium TMD-50PRO y sierra de cinta Urrea](../recursos/imgs/Fresa.jpg)
@@ -54,19 +54,19 @@ Para poner en práctica lo aprendido, tomamos mediciones en cinco cubos de prueb
 ---
 
 ## 4. Deformación y Corte de Lámina Metálica
-* **Guillotina Mecánica Manual:** El profesor nos mostró cómo se utiliza para hacer cortes rectos en láminas delgadas presionando la palanca inferior de pedal.[cite: 3]
-* **Dobladora de Lámina (Prensa de Doblado Dynamo):** Nos explicó su función para hacer pliegues y pestañas angulares uniformes al bajar la cortina o regla superior sobre la matriz de la pieza.[cite: 3]
+* **Guillotina Mecánica Manual:** El profesor nos mostró cómo se utiliza para hacer cortes rectos en láminas delgadas presionando la palanca inferior de pedal. 
+* **Dobladora de Lámina (Prensa de Doblado Dynamo):** Nos explicó su función para hacer pliegues y pestañas angulares uniformes al bajar la cortina o regla superior sobre la matriz de la pieza. 
 
 ![Guillotina mecánica manual y dobladora de lámina Dynamo](../recursos/imgs/guillotina2.jpg)
 ![Guillotina mecánica manual y dobladora de lámina Dynamo](../recursos/imgs/dobladora.jpg)
 ---
 
 ## 5. Procesos de Unión: Soldadora por Puntos
-Por último, el profesor Oliver nos mostró cómo opera la soldadura por resistencia, la cual une dos láminas de metal al presionarlas con dos electrodos de cobre y soltar un chispazo rápido de alta corriente que funde el punto de contacto sin necesitar material de aporte.[cite: 3]
+Por último, el profesor Oliver nos mostró cómo opera la soldadura por resistencia, la cual une dos láminas de metal al presionarlas con dos electrodos de cobre y soltar un chispazo rápido de alta corriente que funde el punto de contacto sin necesitar material de aporte. 
 
 ![Soldadora por puntos por resistencia con electrodos de cobre](../recursos/imgs/solpunt.jpg)
 
 ---
 
 ## 6. Conclusión
-En lo personal, esta práctica me sirvió muchísimo para perderle el miedo al equipo del taller y entender de forma directa cómo pasar de la teoría a la medición y maquinado real. Aprender a cuidar los detalles en el vernier o el micrómetro y ver el funcionamiento de máquinas como la fresadora me da mucha más confianza para realizar proyectos futuros en la carrera.[cite: 3]
+En lo personal, esta práctica me sirvió muchísimo para perderle el miedo al equipo del taller y entender de forma directa cómo pasar de la teoría a la medición y maquinado real. Aprender a cuidar los detalles en el vernier o el micrómetro y ver el funcionamiento de máquinas como la fresadora me da mucha más confianza para realizar proyectos futuros en la carrera.

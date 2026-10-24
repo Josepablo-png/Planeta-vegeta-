@@ -16,10 +16,10 @@ A partir de los conceptos aprendidos sobre impresión 3D, se nos asignó diseña
 * **Configuración:** Se utilizó un **5% de relleno (infill)** para la pieza.
 
 *archivos*
-[LB2](../recursos//archivos/colita%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/cuello%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/Cuerpo1%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/Cuerpo2%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/cuerpo3%201.SLDPRT){loading=lazy}
-[LB2](../recursos//archivos/Final%20final%20jp.SLDASM){loading=lazy}
-[LB2](../recursos//archivos/cabezita%201%201.SLDPRT){loading=lazy}
+[Cola](../recursos//archivos/colita%201.SLDPRT){loading=lazy}
+[Cuello](../recursos//archivos/cuello%201.SLDPRT){loading=lazy}
+[Cuerpo](../recursos//archivos/Cuerpo1%201.SLDPRT){loading=lazy}
+[Cuerpo](../recursos//archivos/Cuerpo2%201.SLDPRT){loading=lazy}
+[Cuerpo](../recursos//archivos/cuerpo3%201.SLDPRT){loading=lazy}
+[Ensamble](../recursos//archivos/Final%20final%20jp.SLDASM){loading=lazy}
+[Cabeza](../recursos//archivos/cabezita%201%201.SLDPRT){loading=lazy}
