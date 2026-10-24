@@ -82,7 +82,7 @@ Construir en equipo un carro controlado por Bluetooth, integrando los conocimien
 | El carro no se movía | Probamos varias veces a encender el carro para ver si ya funcionaba, pero ninguno de los motores se movía | Verificamos las conexiones y reemplazamos las baterías, además de que volvimos a subir el código |
 
 ## Video de funcionamiento
-[Haz clic aquí para ver el video](../../recursos/videos/VideoCarroBT.mp4)
+[Haz clic aquí para ver el video](../recursos/imgs/MicrosoftTeams-video.mp4)
 
 ## Requisitos vs Resultados
 | # | Requisito | ¿Se cumplió? |
