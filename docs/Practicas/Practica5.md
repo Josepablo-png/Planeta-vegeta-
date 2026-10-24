@@ -72,3 +72,5 @@ En general, la práctica nos permitió aplicar lo aprendido en clase y conocer u
 
 
 *Se uso IA para darle formato y un tono mas formal a la practica*
+
+[Haz clic aquí para ver el video](../recursos/imgs/Video67.mp4)
