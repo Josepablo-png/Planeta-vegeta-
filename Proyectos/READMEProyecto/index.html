@@ -1,0 +1,1936 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Proyecto1/">
+      
+      
+        <link rel="next" href="../../Reflexiones/VisionMecatronica/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Codigo Proyecto 1 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#carrito-de-futbol-con-control-xbox-esp32" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Codigo Proyecto 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/PIJP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingenieria I Jose Pablo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/PICM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingenieria I Carlos Mario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practicas-Oliver-Jose-Pablo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practicas-Oliver-Jose-Pablo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practicas1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practicas2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practicas3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practicas4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practicas5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practicas-Oliver-Carlos-Mario
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practicas-Oliver-Carlos-Mario
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/PracticasCarl1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/PracticasCarl2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/PracticasCarl3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/PracticasCarl4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/PracticasCarl5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codigo Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codigo Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-librerias-para-el-control-inalambrico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de librerías para el Control Inalámbrico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emparejamiento-del-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emparejamiento del control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolo-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolo de Comandos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comportamiento-y-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comportamiento y seguridad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajustes-en-el-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajustes en el código
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depuración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas comunes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-completo-arduino-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Código completo (Arduino IDE)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-librerias-para-el-control-inalambrico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de librerías para el Control Inalámbrico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emparejamiento-del-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emparejamiento del control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolo-de-comandos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolo de Comandos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comportamiento-y-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comportamiento y seguridad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajustes-en-el-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ajustes en el código
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depuración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas comunes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-completo-arduino-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Código completo (Arduino IDE)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="carrito-de-futbol-con-control-xbox-esp32">Carrito de Fútbol con Control Xbox (ESP32)</h1>
+<p>Carrito de tracción diferencial controlado con un control inalámbrico de Xbox por Bluetooth Low Energy (BLE). Cuenta con un mecanismo de tiro accionado por un servo SG90.</p>
+<h2 id="configuracion-de-librerias-para-el-control-inalambrico">Configuración de librerías para el Control Inalámbrico</h2>
+<p>Para usar el control de Xbox con el ESP32 se usaron las siguientes librerías (instalar desde <strong>Herramientas → Administrar bibliotecas</strong> en el IDE de Arduino):</p>
+<table>
+<thead>
+<tr>
+<th>Librería</th>
+<th>Uso en el proyecto</th>
+<th>Enlace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BLE-Gamepad-Client</code> (tbekas)</td>
+<td>Conexión y lectura del control Xbox por BLE (<code>XboxController</code>, <code>XboxControlsState</code>)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ESP32Servo</code> (madhephaestus)</td>
+<td>Manejo del servo SG90 del mecanismo de tiro (<code>Servo</code>, <code>ESP32PWM</code>)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Notas:</p>
+<ul>
+<li>En PlatformIO, <code>BLE-Gamepad-Client</code> se agrega en <code>lib_deps</code> como <code>tbekas/BLE-Gamepad-Client@^0.12.1</code>.</li>
+<li><code>BLE-Gamepad-Client</code> está construida sobre NimBLE-Arduino, que se instala como dependencia.</li>
+<li>No se usa Bluepad32, por lo que <strong>no</strong> hacen falta URLs adicionales de gestor de tarjetas. Basta con el paquete oficial de ESP32 para Arduino.</li>
+<li>El código usa <code>ledcAttachChannel</code>, que pertenece a la versión 3.x del paquete ESP32 para Arduino. Con versiones 2.x no compila.</li>
+<li>El control Xbox debe tener el firmware 5.x. Se puede actualizar desde la app <em>Accesorios Xbox</em>.</li>
+</ul>
+<h2 id="emparejamiento-del-control">Emparejamiento del control</h2>
+<ol>
+<li>Cargar el programa en el ESP32 y abrir el monitor serial a <strong>115200 baudios</strong>.</li>
+<li>Encender el control presionando el botón Xbox.</li>
+<li>Mantener presionado el botón de emparejamiento del control durante 3 segundos y soltarlo.</li>
+<li>El LED integrado del ESP32 deja de parpadear y queda <strong>fijo</strong> cuando el control está conectado.</li>
+</ol>
+<h2 id="protocolo-de-comandos">Protocolo de Comandos</h2>
+<ul>
+<li><strong>Palanca izquierda (Eje Y):</strong> controla avance y retroceso.</li>
+<li><strong>Palanca izquierda (Eje X):</strong> controla el giro. Se aplica una mezcla tipo arcade: motor izquierdo = Y + X, motor derecho = Y − X.</li>
+<li>Solo adelante o atrás: ambas ruedas igual.</li>
+<li>Adelante + lado: curva, la rueda interior va más lenta.</li>
+<li>Solo lado: el carro gira sobre su propio eje.</li>
+<li><strong>Zona muerta:</strong> 0.12 sobre el recorrido de la palanca (de 0 a 1). Dentro de esa zona los motores se detienen.</li>
+<li><strong>Botones LB / RB:</strong> bajan o suben el nivel de velocidad (3 niveles).</li>
+<li>Nivel 1 (bajo): PWM máximo 150</li>
+<li>Nivel 2 (medio): PWM máximo 210 (nivel inicial)</li>
+<li>Nivel 3 (alto): PWM máximo 255</li>
+<li>El PWM mínimo de arranque es 60 para vencer la fricción de la caja reductora.</li>
+<li><strong>Botón A o Gatillo derecho (RT, más de la mitad del recorrido):</strong> tiro con el servo. Pasa de 0° a 90° durante 120 ms y regresa a 0°. Hay 300 ms de recarga antes de poder tirar de nuevo.</li>
+<li><strong>Botón B:</strong> paro de emergencia. Mientras esté presionado, los motores se mantienen en 0.</li>
+</ul>
+<h2 id="comportamiento-y-seguridad">Comportamiento y seguridad</h2>
+<ul>
+<li><strong>Aceleración suave:</strong> la velocidad sube como máximo 25 unidades de PWM cada 10 ms. Frenar o bajar la velocidad es inmediato. Al invertir el sentido, el motor pasa primero por cero.</li>
+<li><strong>Control desconectado:</strong> los motores se detienen y el LED integrado parpadea mientras se busca el control. En el monitor serial aparece "Control no conectado...".</li>
+<li><strong>Freno:</strong> con velocidad cero ambos pines IN del driver se ponen en alto (freno corto).</li>
+<li><strong>Watchdog opcional (<code>USAR_WATCHDOG</code>):</strong> desactivado por defecto. Si se activa, detiene los motores cuando la palanca no cambia durante 1000 ms (<code>TIEMPO_FAILSAFE</code>).</li>
+<li><strong>Servo:</strong> se desacopla (<code>detach</code>) cuando no está tirando para evitar vibración y consumo.</li>
+</ul>
+<h2 id="conexiones">Conexiones</h2>
+<p>Alimentación: portapilas de 4 pilas AA con switch hacia 5V del ESP32, VM del TB6612FNG y VCC del servo. Todos comparten GND. El VCC lógico del TB6612FNG se conecta al 3V3 del ESP32.</p>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Pin del ESP32</th>
+<th>Pin del componente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PWM motor A (izquierdo)</td>
+<td>GPIO14</td>
+<td>PWMA (TB6612FNG)</td>
+</tr>
+<tr>
+<td>Dirección motor A</td>
+<td>GPIO27 / GPIO26</td>
+<td>AIN1 / AIN2</td>
+</tr>
+<tr>
+<td>Dirección motor B</td>
+<td>GPIO25 / GPIO33</td>
+<td>BIN1 / BIN2</td>
+</tr>
+<tr>
+<td>PWM motor B (derecho)</td>
+<td>GPIO32</td>
+<td>PWMB</td>
+</tr>
+<tr>
+<td>Standby del driver</td>
+<td>GPIO4</td>
+<td>STBY</td>
+</tr>
+<tr>
+<td>Señal del servo</td>
+<td>GPIO13</td>
+<td>Señal (SG90)</td>
+</tr>
+<tr>
+<td>LED indicador</td>
+<td>GPIO2</td>
+<td>LED integrado</td>
+</tr>
+</tbody>
+</table>
+<p>Los motores TT se conectan a AO1/AO2 (izquierdo) y BO1/BO2 (derecho).</p>
+<h2 id="ajustes-en-el-codigo">Ajustes en el código</h2>
+<p>Constantes al inicio del programa:</p>
+<table>
+<thead>
+<tr>
+<th>Constante</th>
+<th>Valor por defecto</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INVERTIR_Y</code></td>
+<td><code>false</code></td>
+<td>Poner <code>true</code> si al empujar la palanca arriba el carro va hacia atrás</td>
+</tr>
+<tr>
+<td><code>INVERTIR_X</code></td>
+<td><code>false</code></td>
+<td>Poner <code>true</code> si el carro gira al lado contrario</td>
+</tr>
+<tr>
+<td><code>INVERTIR_MOTOR_A</code></td>
+<td><code>true</code></td>
+<td>Invierte el sentido del motor izquierdo</td>
+</tr>
+<tr>
+<td><code>INVERTIR_MOTOR_B</code></td>
+<td><code>false</code></td>
+<td>Invierte el sentido del motor derecho</td>
+</tr>
+<tr>
+<td><code>ZONA_MUERTA</code></td>
+<td><code>0.12</code></td>
+<td>Zona muerta de la palanca</td>
+</tr>
+<tr>
+<td><code>PWM_MINIMO</code></td>
+<td><code>60</code></td>
+<td>PWM mínimo al moverse</td>
+</tr>
+<tr>
+<td><code>NIVELES</code></td>
+<td><code>{150, 210, 255}</code></td>
+<td>PWM máximo de cada nivel de velocidad</td>
+</tr>
+<tr>
+<td><code>PASO_ACEL</code></td>
+<td><code>25</code></td>
+<td>Aumento máximo de PWM por ciclo de 10 ms</td>
+</tr>
+<tr>
+<td><code>POS_REPOSO</code> / <code>POS_GOLPE</code></td>
+<td><code>0</code> / <code>90</code></td>
+<td>Ángulos del servo</td>
+</tr>
+<tr>
+<td><code>TIEMPO_GOLPE</code> / <code>TIEMPO_RECARGA</code></td>
+<td><code>120</code> / <code>300</code> ms</td>
+<td>Duración del golpe y de la recarga</td>
+</tr>
+<tr>
+<td><code>USAR_WATCHDOG</code></td>
+<td><code>false</code></td>
+<td>Activa el paro por falta de cambios en la palanca</td>
+</tr>
+<tr>
+<td><code>DEBUG</code></td>
+<td><code>true</code></td>
+<td>Imprime datos por el monitor serial</td>
+</tr>
+</tbody>
+</table>
+<h2 id="depuracion">Depuración</h2>
+<p>Con <code>DEBUG</code> en <code>true</code>, cada 250 ms el monitor serial (115200 baudios) muestra:</p>
+<p>X:  0.00 Y:  0.85 | A: 210 B: 210 | nivel:2 | rep/s:120</p>
+<ul>
+<li><code>X</code>, <code>Y</code>: posición de la palanca izquierda.</li>
+<li><code>A</code>, <code>B</code>: PWM actual del motor izquierdo y derecho (negativo = reversa).</li>
+<li><code>nivel</code>: nivel de velocidad seleccionado (1 a 3).</li>
+<li><code>rep/s</code>: reportes por segundo que llegan del control, útil para detectar mala conexión.</li>
+</ul>
+<h2 id="problemas-comunes">Problemas comunes</h2>
+<ul>
+<li><strong>Un motor gira al revés:</strong> cambiar <code>INVERTIR_MOTOR_A</code> o <code>INVERTIR_MOTOR_B</code>, o invertir sus dos cables en el driver.</li>
+<li><strong>El carro va hacia atrás al empujar arriba:</strong> poner <code>INVERTIR_Y</code> en <code>true</code>.</li>
+<li><strong>El ESP32 se reinicia al arrancar los motores:</strong> agregar un capacitor de 470 a 1000 µF entre +V y GND cerca del TB6612FNG.</li>
+<li><strong>Los motores no se mueven:</strong> revisar que STBY esté conectado a GPIO4 y que el VCC lógico del TB6612FNG esté en 3V3.</li>
+<li><strong>No conecta el control:</strong> verificar el firmware 5.x y repetir el emparejamiento.</li>
+<li><strong>Al programar por USB:</strong> apagar el switch de las pilas para no unir las dos fuentes de alimentación.</li>
+</ul>
+<h2 id="codigo-completo-arduino-ide">Código completo (Arduino IDE)</h2>
+<p>```cpp</p>
+<h1 id="include">include <Arduino.h></h1>
+<h1 id="include_1">include <BLEGamepadClient.h></h1>
+<h1 id="include_2">include <ESP32Servo.h></h1>
+<p>XboxController controller;
+Servo brazoServo;</p>
+<p>// Pines TB6612FNG
+const int pinPWMA = 14;
+const int pinAIN1 = 27;
+const int pinAIN2 = 26;
+const int pinBIN1 = 25;
+const int pinBIN2 = 33;
+const int pinPWMB = 32;
+const int pinSTBY = 4;</p>
+<p>// Servo SG90 (mecanismo de tiro)
+const int pinSERVO = 13;
+const int POS_REPOSO = 0;
+const int POS_GOLPE  = 90;</p>
+<p>// LED integrado: parpadea buscando control, fijo si esta conectado
+const int pinLED = 2;</p>
+<p>// ================== AJUSTES ==================
+const bool INVERTIR_Y = false;       // si empujas arriba y va hacia atras, pon true
+const bool INVERTIR_X = false;       // si gira al lado contrario, pon true
+const bool INVERTIR_MOTOR_A = true; // motor izquierdo (si gira al reves, pon true)
+const bool INVERTIR_MOTOR_B = false; // motor derecho</p>
+<p>const float ZONA_MUERTA = 0.12;
+const int   PWM_MINIMO  = 60;
+const int   NIVELES[3]  = {150, 210, 255};  // R2: 3 niveles (baja, media, alta)
+int nivel = 1;                              // arranca en media</p>
+<p>const int PASO_ACEL = 25;                   // aceleracion limitada por tick
+const unsigned long PERIODO_CONTROL = 10;</p>
+<p>// Tiro
+const unsigned long TIEMPO_GOLPE   = 120;
+const unsigned long TIEMPO_RECARGA = 300;</p>
+<p>// R4: se detiene siempre que el control se desconecta.
+// Opcional: detener si la palanca no cambia en este tiempo
+const bool USAR_WATCHDOG = false;
+const unsigned long TIEMPO_FAILSAFE = 1000;</p>
+<p>const bool DEBUG = true;
+// =============================================</p>
+<p>const int PWM_FREQ = 20000;
+const int PWM_RES  = 8;</p>
+<p>// Estado de motores (con signo: positivo adelante, negativo atras)
+int actualA = 0;
+int actualB = 0;</p>
+<p>// Estado del tiro
+enum EstadoTiro { TIRO_LIBRE, TIRO_EXTENDIDO, TIRO_RECARGA };
+EstadoTiro estadoTiro = TIRO_LIBRE;
+unsigned long inicioTiro = 0;</p>
+<p>// Estado de botones y reportes
+bool prevLB = false, prevRB = false, prevTiro = false;
+float ultX = 0, ultY = 0;
+unsigned long ultimoCambio = 0;
+unsigned long ultimoControl = 0;
+unsigned long ultimoDebug = 0;
+unsigned long reportes = 0;</p>
+<p>// ---------- Motores ----------
+void direccionMotor(int in1, int in2, int valor) {
+  if (valor &gt; 0) {
+    digitalWrite(in1, HIGH); digitalWrite(in2, LOW);
+  } else if (valor &lt; 0) {
+    digitalWrite(in1, LOW);  digitalWrite(in2, HIGH);
+  } else {
+    digitalWrite(in1, HIGH); digitalWrite(in2, HIGH);  // freno corto
+  }
+}</p>
+<p>void escribirMotores(int a, int b) {
+  if (INVERTIR_MOTOR_A) a = -a;
+  if (INVERTIR_MOTOR_B) b = -b;
+  direccionMotor(pinAIN1, pinAIN2, a);
+  direccionMotor(pinBIN1, pinBIN2, b);
+  ledcWrite(pinPWMA, abs(a));
+  ledcWrite(pinPWMB, abs(b));
+}</p>
+<p>void detenerTodo() {
+  actualA = 0;
+  actualB = 0;
+  escribirMotores(0, 0);
+}</p>
+<p>// Aceleracion limitada; frenar o bajar velocidad es inmediato
+int rampa(int actual, int objetivo) {
+  if ((actual &gt; 0 &amp;&amp; objetivo &lt; 0) || (actual &lt; 0 &amp;&amp; objetivo &gt; 0)) actual = 0;
+  if (abs(objetivo) &lt;= abs(actual)) return objetivo;
+  if (objetivo &gt; 0) return min(actual + PASO_ACEL, objetivo);
+  return max(actual - PASO_ACEL, objetivo);
+}</p>
+<p>int valorPWM(float v) {
+  float a = fabsf(v);
+  if (a &lt; 0.03) return 0;
+  int pwm = PWM_MINIMO + (int)(a * (NIVELES[nivel] - PWM_MINIMO));
+  return v &gt; 0 ? pwm : -pwm;
+}</p>
+<p>// Mezcla tipo "arcade": Y = avance, X = giro
+void calcularObjetivo(float x, float y, int &amp;objA, int &amp;objB) {
+  float mag = sqrtf(x * x + y * y);
+  if (mag &lt; ZONA_MUERTA) { objA = 0; objB = 0; return; }
+  if (mag &gt; 1.0f) { x /= mag; y /= mag; mag = 1.0f; }
+  float escala = (mag - ZONA_MUERTA) / (1.0f - ZONA_MUERTA);
+  x = x / mag * escala;
+  y = y / mag * escala;</p>
+<p>float izq = y + x;  // motor A = izquierdo
+  float der = y - x;  // motor B = derecho
+  float mx = fmaxf(fabsf(izq), fabsf(der));
+  if (mx &gt; 1.0f) { izq /= mx; der /= mx; }</p>
+<p>objA = valorPWM(izq);
+  objB = valorPWM(der);
+}</p>
+<p>// ---------- Tiro (servo) ----------
+void iniciarTiro() {
+  if (estadoTiro != TIRO_LIBRE) return;
+  if (!brazoServo.attached()) brazoServo.attach(pinSERVO, 500, 2400);
+  brazoServo.write(POS_GOLPE);
+  inicioTiro = millis();
+  estadoTiro = TIRO_EXTENDIDO;
+}</p>
+<p>void actualizarTiro(unsigned long ahora) {
+  switch (estadoTiro) {
+    case TIRO_EXTENDIDO:
+      if (ahora - inicioTiro &gt;= TIEMPO_GOLPE) {
+        brazoServo.write(POS_REPOSO);
+        estadoTiro = TIRO_RECARGA;
+      }
+      break;
+    case TIRO_RECARGA:
+      if (ahora - inicioTiro &gt;= TIEMPO_GOLPE + TIEMPO_RECARGA) {
+        brazoServo.detach();
+        estadoTiro = TIRO_LIBRE;
+      }
+      break;
+    default:
+      break;
+  }
+}</p>
+<p>void setup() {
+  Serial.begin(115200);
+  delay(500);</p>
+<p>Serial.println();
+  Serial.println("========================================");
+  Serial.println("   CARRITO FUTBOL - CONTROL XBOX");
+  Serial.println("========================================");</p>
+<p>ESP32PWM::allocateTimer(0);
+  brazoServo.setPeriodHertz(50);
+  brazoServo.attach(pinSERVO, 500, 2400);
+  brazoServo.write(POS_REPOSO);
+  delay(400);
+  brazoServo.detach();</p>
+<p>pinMode(pinAIN1, OUTPUT);
+  pinMode(pinAIN2, OUTPUT);
+  pinMode(pinBIN1, OUTPUT);
+  pinMode(pinBIN2, OUTPUT);
+  pinMode(pinSTBY, OUTPUT);
+  digitalWrite(pinSTBY, HIGH);
+  pinMode(pinLED, OUTPUT);</p>
+<p>ledcAttachChannel(pinPWMA, PWM_FREQ, PWM_RES, 4);
+  ledcAttachChannel(pinPWMB, PWM_FREQ, PWM_RES, 5);</p>
+<p>detenerTodo();</p>
+<p>controller.begin();
+  Serial.println("Esperando control Xbox...");
+  ultimoCambio = millis();
+}</p>
+<p>void loop() {
+  unsigned long ahora = millis();
+  actualizarTiro(ahora);</p>
+<p>if (!controller.isConnected()) {
+    detenerTodo();
+    prevLB = prevRB = prevTiro = false;
+    ultimoCambio = ahora;
+    digitalWrite(pinLED, (ahora / 250) % 2);</p>
+<div class="language-text highlight"><pre><span></span><code>static unsigned long ultimoMensaje = 0;
+if (ahora - ultimoMensaje &gt; 1000) {
+  Serial.println("Control no conectado...");
+  ultimoMensaje = ahora;
+}
+delay(10);
+return;
+</code></pre></div>
+<p>}</p>
+<p>digitalWrite(pinLED, HIGH);</p>
+<p>XboxControlsState s;
+  controller.read(&amp;s);</p>
+<p>bool lb = s.leftBumper, rb = s.rightBumper;
+  if (rb &amp;&amp; !prevRB &amp;&amp; nivel &lt; 2) { nivel++; Serial.printf("Nivel %d\n", nivel + 1); }
+  if (lb &amp;&amp; !prevLB &amp;&amp; nivel &gt; 0) { nivel--; Serial.printf("Nivel %d\n", nivel + 1); }
+  prevLB = lb;
+  prevRB = rb;</p>
+<p>bool pedirTiro = s.buttonA || (s.rightTrigger &gt; 0.5);
+  if (pedirTiro &amp;&amp; !prevTiro) iniciarTiro();
+  prevTiro = pedirTiro;</p>
+<p>if (s.leftStickX != ultX || s.leftStickY != ultY) {
+    ultX = s.leftStickX;
+    ultY = s.leftStickY;
+    ultimoCambio = ahora;
+    reportes++;
+  }</p>
+<p>if (ahora - ultimoControl &gt;= PERIODO_CONTROL) {
+    ultimoControl = ahora;</p>
+<div class="language-text highlight"><pre><span></span><code>float x = s.leftStickX;
+float y = s.leftStickY;
+if (INVERTIR_Y) y = -y;
+if (INVERTIR_X) x = -x;
+
+int objA, objB;
+calcularObjetivo(x, y, objA, objB);
+
+if (s.buttonB) { objA = 0; objB = 0; }
+
+if (USAR_WATCHDOG &amp;&amp; (objA != 0 || objB != 0) &amp;&amp; (ahora - ultimoCambio &gt;= TIEMPO_FAILSAFE)) {
+  objA = 0;
+  objB = 0;
+}
+
+actualA = rampa(actualA, objA);
+actualB = rampa(actualB, objB);
+escribirMotores(actualA, actualB);
+
+if (DEBUG &amp;&amp; ahora - ultimoDebug &gt;= 250) {
+  Serial.printf("X:%6.2f Y:%6.2f | A:%4d B:%4d | nivel:%d | rep/s:%lu\n",
+                x, y, actualA, actualB, nivel + 1, reportes * 4);
+  reportes = 0;
+  ultimoDebug = ahora;
+}
+</code></pre></div>
+<p>}
+}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

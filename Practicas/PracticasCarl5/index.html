@@ -1,0 +1,1612 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../PracticasCarl4/">
+      
+      
+        <link rel="next" href="../../Proyectos/Proyecto1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 5 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-5-introduccion-al-maquinado-cnc-simulacion-en-nc-viewer-y-router-asia-robotica" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 5
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PIJP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingenieria I Jose Pablo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PICM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingenieria I Carlos Mario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practicas-Oliver-Jose-Pablo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practicas-Oliver-Jose-Pablo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practicas1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practicas2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practicas3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practicas4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practicas5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practicas-Oliver-Carlos-Mario
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practicas-Oliver-Carlos-Mario
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PracticasCarl1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PracticasCarl2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PracticasCarl3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PracticasCarl4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-y-el-papel-del-nc-viewer-en-el-proceso-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción y el Papel del NC Viewer en el Proceso CAM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-programacion-y-control-en-g-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Programación y Control en G-Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Programación y Control en G-Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-sintaxis-y-diccionario-ampliado-de-comandos-g-y-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Sintaxis y Diccionario Ampliado de Comandos G y M
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-simulacion-y-validacion-en-nc-viewer-ejercicio-del-pentagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Simulación y Validación en NC Viewer (Ejercicio del Pentagrama)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-preparacion-cam-en-vcarve-pro-y-transferencia-via-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Preparación CAM en VCarve Pro y Transferencia vía USB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-descripcion-y-operacion-del-router-cnc-asia-robotica-shop-1325" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Descripción y Operación del Router CNC Asia Robótica (Shop-1325)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-protocolo-de-preparacion-y-maquinado-de-la-espuma-rosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Protocolo de Preparación y Maquinado de la Espuma Rosa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/READMEProyecto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codigo Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-y-el-papel-del-nc-viewer-en-el-proceso-cam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción y el Papel del NC Viewer en el Proceso CAM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-programacion-y-control-en-g-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Programación y Control en G-Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Programación y Control en G-Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-sintaxis-y-diccionario-ampliado-de-comandos-g-y-m" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Sintaxis y Diccionario Ampliado de Comandos G y M
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-simulacion-y-validacion-en-nc-viewer-ejercicio-del-pentagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Simulación y Validación en NC Viewer (Ejercicio del Pentagrama)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-preparacion-cam-en-vcarve-pro-y-transferencia-via-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Preparación CAM en VCarve Pro y Transferencia vía USB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-descripcion-y-operacion-del-router-cnc-asia-robotica-shop-1325" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Descripción y Operación del Router CNC Asia Robótica (Shop-1325)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-protocolo-de-preparacion-y-maquinado-de-la-espuma-rosa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Protocolo de Preparación y Maquinado de la Espuma Rosa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Conclusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practica-5-introduccion-al-maquinado-cnc-simulacion-en-nc-viewer-y-router-asia-robotica">Práctica 5: Introducción al Maquinado CNC, Simulación en NC Viewer y Router Asia Robótica</h1>
+<p><strong>Institución:</strong> Universidad Iberoamericana Puebla (Ibero Puebla)<br />
+<strong>Materia:</strong> Proyecto de Ingeniería<br />
+<strong>Alumno:</strong> Carlos Mario Díaz Moscoso<br />
+<strong>Profesor:</strong> Oliver Ochoa García<br />
+<strong>Ubicación:</strong> Fab Lab Puebla<br />
+<strong>Fecha:</strong> 9 de octubre de 2026</p>
+<h2 id="1-introduccion-y-el-papel-del-nc-viewer-en-el-proceso-cam">1. Introducción y el Papel del NC Viewer en el Proceso CAM</h2>
+<p>Antes de operar una máquina de control numérico computarizado (CNC) física, es indispensable contar con herramientas de validación digital que nos permitan prevenir errores graves de colisión, rotura de fresas o fallas en el material. Aquí es donde entra NC Viewer (ncviewer.com), una plataforma de simulación basada en navegador web que cumple un rol fundamental en la etapa previa al maquinado real.
+El propósito principal de utilizar NC Viewer es visualizar de manera gráfica y tridimensional las trayectorias que seguirá la herramienta de corte a partir del código G generado. Nos sirve como un filtro de seguridad y aprendizaje para:
+* <strong>Validación de cotas:</strong> Comprobar que las coordenadas programadas correspondan exactamente al diseño deseado sin saltos extraños.
+* <strong>Prevención de colisiones:</strong> Identificar si existen movimientos erróneos en los ejes o profundidades de corte excesivas (Z) antes de enviarlas al controlador de la máquina real.
+* <strong>Traducción cinemática:</strong> Entender la lógica matemática detrás de los comandos numéricos y cómo el software traduce los vectores en instrucciones físicas para los motores.</p>
+<h2 id="_1"><img alt="Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación" src="../../recursos/imgs/codigo6767.jpg" /></h2>
+<h2 id="2-programacion-y-control-en-g-code">2. Programación y Control en G-Code</h2>
+<h3 id="21-sintaxis-y-diccionario-ampliado-de-comandos-g-y-m">2.1. Sintaxis y Diccionario Ampliado de Comandos G y M</h3>
+<p>El código G y el código M son los lenguajes estandarizados utilizados para indicarle al control numérico de la máquina las trayectorias geométricas, las velocidades, el sentido de giro y las funciones auxiliares de operación:
+| Comando / Var. | Descripción / Función | Clasificación |
+| :--- | :--- | :--- |
+| G0 / G00 | Movimiento rápido de posicionamiento (sin realizar corte). | Movimiento |
+| G1 / G01 | Movimiento lineal controlado con avance de corte definido por F. | Interpolación |
+| G2 / G02 | Interpolación circular en sentido horario (CW - Clockwise). | Interpolación |
+| G3 / G03 | Interpolación circular en sentido antihorario (CCW). | Interpolación |
+| G04 | Temporización o pausa (Dwell) mediante parámetro P o X. | Control Temporal |
+| G17 | Selecciona el plano de trabajo XY. | Selección de Plano |
+| G18 | Selecciona el plano de trabajo XZ. | Selección de Plano |
+| G19 | Selecciona el plano de trabajo YZ. | Selección de Plano |
+| G20 | Define el sistema de unidades en pulgadas. | Unidades |
+| G21 | Define el sistema de unidades en milímetros. | Unidades |
+| G28 | Retorno automático al punto de referencia de la máquina (Home). | Referencia |
+| G40 | Cancela la compensación de radio de la herramienta. | Compensación |
+| G41 | Activa la compensación de radio a la izquierda del contorno. | Compensación |
+| G42 | Activa la compensación de radio a la derecha del contorno. | Compensación |
+| G43 | Activa la compensación de longitud de la herramienta. | Compensación |
+| G53 | Utiliza el sistema de coordenadas de la máquina (MCS). | Sistema Coord. |
+| G54 a G59 | Selecciona Sistemas de Coordenadas de Trabajo (WCS). | Sistema Coord. |
+| G80 | Cancela los ciclos fijos (perforación, cajeado, roscado). | Ciclos Fijos |
+| G81 | Ciclo fijo de taladrado simple. | Ciclos Fijos |
+| G83 | Ciclo fijo de taladrado con descargas profundas (Peck Drilling). | Ciclos Fijos |
+| G90 | Programación en Coordenadas Absolutas. | Modo Coord. |
+| G91 | Programación en Coordenadas Incrementales. | Modo Coord. |
+| G92 | Establece temporalmente el sistema de coordenadas actual. | Modo Coord. |
+| X, Y, Z | Coordenadas espaciales de posición en los ejes tridimensionales. | Posición |
+| I, J, K | Distancias incrementales al centro de un arco en ejes X, Y, Z. | Parám. Arco |
+| F | Velocidad de avance (Feed Rate, p. ej., F180 o F300). | Parám. Corte |
+| S | Velocidad del husillo (Spindle Speed en RPM, p. ej., S18000). | Parám. Corte |
+| T | Selección de número de herramienta (Tool). | Parám. Herram. |
+| M3 / M03 | Encender el husillo en sentido horario (CW). | Función Aux. (M) |
+| M5 / M05 | Apagar el husillo (Spindle Stop). | Función Aux. (M) |
+| M30 | Fin del programa, reinicio de ciclos y rebobinado. | Función Aux. (M) |</p>
+<h3 id="22-simulacion-y-validacion-en-nc-viewer-ejercicio-del-pentagrama">2.2. Simulación y Validación en NC Viewer (Ejercicio del Pentagrama)</h3>
+<p>Como parte del aprendizaje práctico en clase con el maestro Oliver, pusimos a prueba la lógica de coordenadas y la estructura del código G realizando la simulación de un pentagrama en la plataforma NC Viewer. Interpretamos y verificamos líneas de código como los posicionamientos rápidos (G00), los avances lineales de corte (G01) y las interpolaciones circulares (G02), observando de qué manera la herramienta ejecuta la geometría en el plano 2D/3D antes de pasar al equipo real:</p>
+<p><img alt="Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación" src="../../recursos/imgs/codigo67.jpg" /></p>
+<p><img alt="Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación" src="../../recursos/imgs/camafresa.jpg" />
+<img alt="Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación" src="../../recursos/imgs/Fresa.jpg" />
+<img alt="Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación" src="../../recursos/imgs/finalcarl.jpg" />
+<div class="language-gcode highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">G21</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">G90</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">G00 </span><span class="k">X</span><span class="m">50.0</span><span class="w"> </span><span class="k">Y</span><span class="m">0.0</span><span class="w"> </span><span class="k">Z</span><span class="m">5.0</span><span class="w"> </span><span class="k">F</span><span class="m">1000</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">G01 </span><span class="k">Z</span><span class="m">-1.0</span><span class="w"> </span><span class="k">F</span><span class="m">300</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">G02 </span><span class="k">X</span><span class="m">50.0</span><span class="w"> </span><span class="k">Y</span><span class="m">0.0</span><span class="w"> </span><span class="k">I</span><span class="m">-50.0</span><span class="w"> </span><span class="k">J</span><span class="m">0.0</span><span class="w"> </span><span class="k">F</span><span class="m">500</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">G00 </span><span class="k">X</span><span class="m">0.0</span><span class="w"> </span><span class="k">Y</span><span class="m">50.0</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">G01 </span><span class="k">X</span><span class="m">29.39</span><span class="w"> </span><span class="k">Y</span><span class="m">-40.45</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">G01 </span><span class="k">X</span><span class="m">-47.55</span><span class="w"> </span><span class="k">Y</span><span class="m">15.45</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">G01 </span><span class="k">X</span><span class="m">47.55</span><span class="w"> </span><span class="k">Y</span><span class="m">15.45</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nb">G01 </span><span class="k">X</span><span class="m">-29.39</span><span class="w"> </span><span class="k">Y</span><span class="m">-40.45</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">G01 </span><span class="k">X</span><span class="m">0.0</span><span class="w"> </span><span class="k">Y</span><span class="m">50.0</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">G00 </span><span class="k">Z</span><span class="m">5.0</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nb">M02</span>
+</span></code></pre></div></p>
+<hr />
+<h2 id="3-preparacion-cam-en-vcarve-pro-y-transferencia-via-usb">3. Preparación CAM en VCarve Pro y Transferencia vía USB</h2>
+<p>Debido a limitaciones de tiempo en la sesión para elaborar un modelo complejo desde cero, el maestro Oliver tomó la decisión de que utilizáramos una plantilla obtenida de internet.
+Para procesar este diseño vectorial y prepararlo para la máquina, el procedimiento fue el siguiente:
+* <strong>Importación a VCarve Pro:</strong> Abrimos la plantilla en el software VCarve Pro (software CAD/CAM utilizado en el taller).
+* <strong>Configuración de Material y Trayectorias:</strong> En VCarve Pro se definieron las dimensiones del bloque de espuma rosa, la selección de la fresa, la velocidad de avance, la velocidad del husillo y la profundidad de corte por pasada.
+* <strong>Generación del Código G:</strong> Una vez calculadas las trayectorias (Toolpaths), se exportó el archivo en el postprocesador compatible con el router CNC.
+* <strong>Transferencia mediante USB:</strong> El archivo de maquinado generado se guardó en una memoria USB para posteriormente conectarla directamente a la consola o controlador DSP de la máquina Asia Robótica en el área de corte.</p>
+<hr />
+<h2 id="4-descripcion-y-operacion-del-router-cnc-asia-robotica-shop-1325">4. Descripción y Operación del Router CNC Asia Robótica (Shop-1325)</h2>
+<p>Para el maquinado físico en la Ibero Puebla utilizamos el Router CNC Asia Robótica Shop-1325 ubicado en el Fab Lab. Esta máquina es un equipo de gran formato diseñado para el fresado y corte de tableros, acrílicos y polímeros. Funciona mediante motores de alta precisión que desplazan el cabezal sobre los ejes cartesianos mientras el husillo gira a altas revoluciones.
+La espuma rosa fue el material seleccionado debido a sus cualidades de baja densidad, facilidad para el arranque de viruta y gran estabilidad dimensional, permitiendo validar geometrías de forma rápida y segura.</p>
+<hr />
+<h2 id="5-protocolo-de-preparacion-y-maquinado-de-la-espuma-rosa">5. Protocolo de Preparación y Maquinado de la Espuma Rosa</h2>
+<p>Para garantizar un maquinado preciso y seguro en la máquina Asia Robótica, se siguieron los siguientes pasos operativos:
+1. <strong>Limpieza de la base y la cama de sacrificio:</strong> Se limpió la superficie del tablero de sacrificio para retirar cualquier residuo, viruta o polvo acumulado. Mantener plana esta base es indispensable para evitar irregularidades en el eje Z.
+2. <strong>Fijación del material:</strong> Se colocó el bloque de espuma rosa sobre la cama y se aseguró firmemente mediante prensas/bridas para evitar que se desplace o vibre con la fuerza del corte.
+3. <strong>Conexión de la memoria USB y carga del archivo:</strong> Se insertó la memoria USB con el archivo generado previamente en VCarve Pro en el controlador de la máquina.
+4. <strong>Calibración de Ceros (WCS):</strong> Con la consola manual se posicionó la fresa sobre la esquina del material para establecer el origen de trabajo (X0, Y0, Z0).
+5. <strong>Ejecución y Supervisión:</strong> Se puso en marcha el ciclo de maquinado bajo supervisión constante, manteniendo activado el sistema de extracción de polvo y teniendo a la mano el botón de paro de emergencia (E-stop).</p>
+<hr />
+<h2 id="6-conclusion">6. Conclusión</h2>
+<p>La práctica en el Fab Lab Puebla ofreció una visión integral del proceso de manufactura asistida por computadora. La simulación inicial en NC Viewer permitió dominar la sintaxis del código G y la lógica espacial de las coordenadas. Por otro lado, la transición a VCarve Pro para procesar una plantilla de internet, exportarla a una memoria USB y ejecutar el corte en la máquina Asia Robótica sobre espuma rosa, reforzó la importancia de la limpieza de base, la fijación correcta del material y la calibración precisa en el mundo real</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
