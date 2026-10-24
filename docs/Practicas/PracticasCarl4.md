@@ -21,7 +21,6 @@ Durante el proceso en SolidWorks, se aplicaron diversas herramientas fundamental
 * **Ensamblajes:** Esenciales para verificar la cinemática, el rango de movimiento y el correcto acoplamiento de las piezas antes de exportar el archivo definitivo a formato STL  .
 
 ![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/fantadxf.jpg)
-![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/Fanta.jpg)
 ![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/Union%20fanta.jpg)
 
 ---
@@ -31,6 +30,8 @@ El diseño geométrico se divide estructuralmente en tres componentes principale
 1. **La Cabeza:** La sección superior del fantasma que integra los rasgos faciales (ojos y boca mediante extrusiones de corte) y los brazos fijos  .
 2. **Los Eslabones:** Segmentos intermedios móviles que conectan la parte superior con la inferior, diseñados con pasadores y cavidades cilíndricas para dar flexibilidad y movimiento dinámico  .
 3. **La Cola:** El segmento final de la estructura que cierra la cadena cinemática del cuerpo flexible  .
+
+![Vistas del ensamble en SolidWorks: Modelo 3D completo y detalle de pasadores/ejes de articulación](../recursos/imgs/Fanta.jpg)
 
 ---
 
