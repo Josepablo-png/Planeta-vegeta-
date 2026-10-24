@@ -72,6 +72,6 @@ nav:
 
   - "Proyectos":
       - "Proyecto 1": Proyectos/Proyecto1.md
-      - "Codigo Proyecto 1": Proyectos/READMEProyecto1.md
+      - "Codigo Proyecto 1": Proyectos/READMEProyecto.md
   - "Reflexiones":
       - "Vision Mecatronica": Reflexiones/VisionMecatronica.md
