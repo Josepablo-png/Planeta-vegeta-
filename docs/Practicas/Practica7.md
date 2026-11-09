@@ -29,6 +29,9 @@ El controlador PID está formado por tres componentes:
 | 1 | 5 | 1 | 1 | 27.04% | 8.03 | 0.006245 |
 | 2 | 3 | 1 | 1 | 15.42% | 7.1 | 0.001662 |
 
+![Onda1](../recursos/imgs/onda1.jpg){loading=lazy}
+![Onda2](../recursos/imgs/Onda2.jpg){loading=lazy}
+
 ## 5. Análisis de resultados
 
 Al comparar los resultados, observamos que reducir Kp de 5 a 3 disminuyó el sobreimpulso de 27.04% a 15.42%, lo que representa una reducción considerable. También se redujo el tiempo de establecimiento de 8.03 a 7.1 segundos.
